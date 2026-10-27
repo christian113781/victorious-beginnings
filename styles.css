@@ -1,0 +1,83 @@
+/* Victorious Beginnings: small custom CSS (Tailwind handles most styling)
+   Colors: Royal Purple #4A2C8F, Victory Gold #D4A62A, Warm Ivory #FBF8F3
+   Fonts:  Poppins (primary), Lato (body), Playfair Display (secondary) */
+
+:root {
+  --royal: #4A2C8F;
+  --gold: #D4A62A;
+  --ivory: #FBF8F3;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Buttons */
+.btn,
+.btn-outline {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* Gold button: Warm Ivory text on Victory Gold, all caps */
+.btn {
+  background: var(--gold);
+  color: var(--ivory);
+  border: 2px solid var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.btn:hover { background: var(--royal); border-color: var(--royal); color: var(--ivory); }
+.btn-outline { border: 2px solid var(--royal); color: var(--royal); }
+.btn-outline:hover { background: var(--royal); color: #fff; }
+
+/* Keyboard focus */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Links */
+/* Menu: sentence case, regular weight; hover and current section turn gold */
+.nav-link, #mobile-menu a { transition: color 0.15s ease; }
+.nav-link:hover,
+#site-header nav a.is-active { color: var(--gold); }
+.link { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.link:hover { background: rgba(212, 166, 42, 0.18); }
+.footer-link:hover { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+
+/* Headings */
+.section-title {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.contact-heading {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Services list */
+.service { border-top: 1px solid rgba(74, 44, 143, 0.2); padding: 1.25rem 0 1.4rem; }
+.service h3 { font-family: 'Poppins', system-ui, sans-serif; font-size: 1.05rem; font-weight: 600; }
+.service p { margin-top: 0.3rem; }
+
+/* Form */
+.form-label { display: block; margin-bottom: 0.3rem; font-family: 'Poppins', system-ui, sans-serif; font-size: 0.85rem; font-weight: 500; }
+.form-input {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid rgba(74, 44, 143, 0.5);
+  border-radius: 4px;
+  background: #fff;
+  font-size: 1rem; /* 16px avoids iOS zoom on focus */
+  color: var(--royal);
+}
+.form-input[aria-invalid='true'] { border: 2px solid var(--royal); }
+.form-error { min-height: 1.2rem; margin-top: 0.25rem; font-size: 0.85rem; font-weight: 700; }
