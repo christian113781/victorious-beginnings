@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>About Nichole | Victorious Beginnings</title>
+  <meta name="description" content="About Nichole Henderson, founder and CEO of Victorious Beginnings: faith-based, person-centered and solution-focused therapy in Nevada and Texas." />
+  <meta name="theme-color" content="#4A2C8F" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { royal: '#4A2C8F', gold: '#D4A62A', ivory: '#FBF8F3', lavender: '#F1ECF8', 'gold-dark': '#8A6A0A' },
+          fontFamily: {
+            sans: ['Poppins', 'system-ui', 'sans-serif'],
+            body: ['Lato', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="flex min-h-screen flex-col bg-ivory font-body text-royal">
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/10 bg-ivory">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
+      <a href="index.html#home" aria-label="Victorious Beginnings, home">
+        <picture>
+          <source media="(max-width: 639px)" srcset="logo-horizontal.png" width="895" height="230" />
+          <img src="logo.png" alt="Victorious Beginnings" width="120" height="87" class="logo-img h-14 w-auto sm:h-16" />
+        </picture>
+      </a>
+
+      <nav aria-label="Main" class="hidden items-center gap-7 font-sans text-base font-normal xl:gap-8 lg:flex">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link is-active" href="about.html" aria-current="page">About Nichole</a>
+        <a class="nav-link" href="work-with-me.html">Schedule with Me</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="https://victoriousbeginnings.square.site/" target="_blank" rel="noopener">Rates</a>
+        <a class="nav-link" href="ranch.html">The Ranch</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="index.html#contact" class="js-booking btn hidden sm:inline-block">Book now</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-royal/15 bg-ivory lg:hidden">
+      <nav aria-label="Mobile" class="mx-auto flex max-w-6xl flex-col px-5 py-2 font-sans text-base font-normal">
+        <a class="border-b border-royal/10 py-3" href="index.html">Home</a>
+        <a class="is-active border-b border-royal/10 py-3" href="about.html" aria-current="page">About Nichole</a>
+        <a class="border-b border-royal/10 py-3" href="work-with-me.html">Schedule with Me</a>
+        <a class="border-b border-royal/10 py-3" href="contact.html">Contact</a>
+        <a class="border-b border-royal/10 py-3" href="https://victoriousbeginnings.square.site/" target="_blank" rel="noopener">Rates</a>
+        <a class="py-3" href="ranch.html">The Ranch</a>
+        <a href="index.html#contact" class="js-booking btn mb-3 mt-1 text-center sm:hidden">Book now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ABOUT US -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-5xl px-5 py-14 sm:py-20">
+        <h1 class="section-title text-center">About Us</h1>
+
+        <div class="mt-10 grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-12">
+          <img src="images/about-logo.png" width="600" height="437" alt="Victorious Beginnings winged crest logo" class="mx-auto w-full max-w-xs md:max-w-none" />
+          <div>
+            <h2 class="about-h">The Power of Faith and Therapy: Nurturing Wholeness and Resilience</h2>
+            <p class="mt-3">In our complex and often challenging world, it&rsquo;s not uncommon to find ourselves seeking solace, guidance, and a path towards wholeness. At Victorious Beginnings, LLC, we understand the profound impact that faith and therapy can have on individuals, couples, and families. Our founder and CEO, Nichole Henderson, has dedicated her life to bridging the gap between faith and mental well-being, providing a unique approach that empowers individuals to overcome life&rsquo;s hurdles.</p>
+          </div>
+        </div>
+
+        <div class="mt-12 max-w-3xl">
+          <h2 class="about-h">Why Faith Matters</h2>
+          <p class="mt-3">Faith, in all its forms, serves as a guiding light. It can be the unwavering belief that there&rsquo;s hope beyond despair, that there&rsquo;s purpose in our existence, and that there&rsquo;s a path to healing. Nichole, an endorsed Christian counselor, integrates faith seamlessly into her therapeutic approach, leading to spiritual growth and improved self-identity. For many, faith is the cornerstone of resilience, and Nichole is here to help you nurture that faith.</p>
+        </div>
+
+        <div class="mt-12 grid items-center gap-10 md:grid-cols-2 md:gap-14">
+          <div class="space-y-10">
+            <div>
+              <h2 class="about-h">The Healing Power of Therapy</h2>
+              <p class="mt-3">Therapy is not a sign of weakness; it&rsquo;s an act of courage and self-care. Nichole&rsquo;s background in Marriage, Family, and Child Therapy, combined with her B.S. in Business Administration, allows her to provide a unique blend of evidence-based therapy. At Victorious Beginnings, we offer person-centered and solution-focused therapy that assists you in navigating the complexities of life</p>
+            </div>
+            <div>
+              <h2 class="about-h">A Partner on Your Journey</h2>
+              <p class="mt-3">Nichole&rsquo;s unwavering commitment to unconditional acceptance and dedication has made her a trusted partner on the journey to wholeness and relationship permanency. She doesn&rsquo;t just preach; she lives her beliefs. Having faced her own challenges, she understands your struggles, and she&rsquo;s here to guide you towards a victorious lifestyle.</p>
+            </div>
+          </div>
+          <img src="images/about-therapy.png" width="768" height="768" loading="lazy" alt="A calm woman with closed eyes and a gentle smile, wearing a white t-shirt" class="mx-auto w-full max-w-sm md:max-w-none" />
+        </div>
+
+        <p class="mt-12 max-w-3xl">Faith and therapy can be transformative, helping you conquer fear and embrace a life filled with purpose, resilience, and hope. Our approach at Victorious Beginnings, LLC, isn&rsquo;t just about healing; it&rsquo;s about thriving. We invite you to explore the endless possibilities that faith and therapy can offer. Whether you seek spiritual growth, improved self-identity, or mental wellness, we&rsquo;re here to support you on your journey. Join us in discovering the beauty of faith and therapy, and how it can lead to a life of victory.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT NICHOLE -->
+    <section id="nichole" class="scroll-mt-28 bg-lavender">
+      <div class="mx-auto max-w-5xl px-5 py-14 sm:py-20">
+        <h2 class="section-title text-center">About Nichole</h2>
+
+        <div class="mt-10 grid items-start gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)] md:gap-12">
+          <img src="images/about-nichole.png" width="768" height="768" loading="lazy" alt="Portrait of Nichole Henderson, smiling, with long curly hair, wearing a brown pinstripe blazer and an amber pendant necklace" class="mx-auto w-full max-w-xs md:max-w-none md:sticky md:top-28" />
+          <div class="space-y-4">
+            <p>Nichole Henderson is the founder and CEO of Victorious Beginnings, LLC.</p>
+            <p>She started She started her independent private practice in Las Vegas, Nevada in 2012 and is where she has consistently delivered an extraordinary level of quality faith-based services to families, individuals, couples and groups.</p>
+            <p>She attributes her success in mental and behavioral health services to her unique ability to engage in unconditional acceptance and dedication to individuals who seek resiliency, wholeness and relationship permanency.</p>
+            <p>Nichole offers person centered and solution focused therapy with evidence-based principles to help clients navigate their complex worlds.</p>
+            <p>Not only does Nichole hold a B.S in Business Administration and a M.A. in Marriage, Family and Child Therapy, but she is endorsed as a Christian counselor who is able to provide spiritual guidance that leads to spiritual growth, improved identify, as well as spiritual and mental wellness.</p>
+            <p>Additionally, Nichole facilitates long standing emotional support groups, has an active volunteer life and serves as a lay pastor to dedicated church leaders, parishioners and church members in Texas and Nevada.</p>
+            <p>Nichole&lsquo;s adamant belief that faith plus action kills fear doesn&rsquo;t only show up in her work with her clients, but truly is the cornerstone of how she lives her own life. Having traversed her own valleys with the same tools, insights and divine guidance is how Nichole is able to relate to and ultimately help individuals obtain a victorious lifestyle themselves...and, humbly speaking &ndash; why so many seek her out exclusively.</p>
+          </div>
+        </div>
+
+        <blockquote class="verse-line mx-auto mt-12 max-w-2xl text-center">
+          <p class="verse-text">&ldquo;Excellence is to do a common thing in an uncommon way.&rdquo;</p>
+          <footer class="verse-ref">&mdash; Booker T Washington</footer>
+        </blockquote>
+
+        <div class="mt-10 text-center">
+          <a href="https://www.therapyportal.com/p/victorious/" target="_blank" rel="noopener" class="btn inline-block">Book your free 15-min consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AS LISTED IN -->
+    <section id="listed" class="bg-royal text-white">
+      <div class="mx-auto max-w-6xl px-5 py-8 text-center sm:py-10">
+        <h2 class="section-title">As listed in:</h2>
+        <ul class="logo-grid logo-grid-lg mt-5">
+          <li style="--w:11.8"><img src="images/listed/betterhelp.png" alt="BetterHelp" width="691" height="104" loading="lazy" decoding="async"></li>
+          <li style="--w:8.6"><img src="images/listed/alma.png" alt="Alma" width="436" height="123" loading="lazy" decoding="async"></li>
+          <li style="--w:9.6"><img src="images/listed/psychology-today.png" alt="Psychology Today" width="595" height="137" loading="lazy" decoding="async"></li>
+          <li style="--w:8.4"><img src="images/listed/therapy-for-black-girls.png" alt="Therapy for Black Girls" width="743" height="219" loading="lazy" decoding="async"></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html#home" aria-label="Victorious Beginnings, home">
+            <img src="logo.png" alt="Victorious Beginnings" width="200" height="146" class="h-28 w-auto" />
+          </a>
+          <p class="footer-tagline">Consistency over time creates resiliency over a lifetime.</p>
+          <ul class="footer-social" aria-label="Social media">
+            <!-- Replace # with the real profile links -->
+            <li><a href="#" data-placeholder-link aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
+            <li><a href="#" data-placeholder-link aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 9h3.4v11H5zM6.7 3.6a2 2 0 110 4 2 2 0 010-4zM10.5 9h3.2v1.5c.5-.9 1.6-1.8 3.3-1.8 3.4 0 4 2.2 4 5.100V20h-3.400v-5.300c0-1.300 0-2.900-1.800-2.900s-2 1.400-2 2.800V20h-3.400z"/></svg></a></li>
+            <li><a href="#" data-placeholder-link aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0121 7.500v9a4.500 4.500 0 01-4.500 4.500h-9A4.500 4.500 0 013 16.500v-9A4.500 4.500 0 017.500 3zm0 1.800A2.700 2.700 0 004.800 7.500v9a2.700 2.700 0 002.700 2.700h9a2.700 2.700 0 002.700-2.700v-9a2.700 2.700 0 00-2.700-2.700zM12 7.800a4.200 4.200 0 110 8.400 4.200 4.200 0 010-8.400zm0 1.800a2.400 2.400 0 100 4.800 2.400 2.400 0 000-4.800zm4.700-3.300a1 1 0 110 2 1 1 0 010-2z"/></svg></a></li>
+            </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Nichole</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#rates">Rates &amp; Insurance</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.therapyportal.com/p/victorious/" target="_blank" rel="noopener">Client Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Need help now?</h3>
+          <div class="footer-crisis">
+            <p>If you are in crisis, call or text <strong>988</strong>, the Suicide &amp; Crisis Lifeline. It is free and available 24/7.</p>
+            <a href="tel:988" class="crisis-btn">Call 988</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright &copy; <span id="year">2026</span> | Powered by Victorious Beginnings</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#main" id="to-top" class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+  <script src="script.js"></script>
+</body>
+</html>

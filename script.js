@@ -4,12 +4,11 @@
 
   /* ---------- SETTINGS: edit these ---------- */
   // Paste your real booking page link (Calendly, SimplePractice, etc.).
-  // Every "Book..." button will use it. Leave empty to scroll to the contact form.
-  var BOOKING_URL = '';
-
-  // Optional: a form service address (e.g., Formspree) to receive messages.
-  // Leave empty and the form only shows the thank-you message (nothing is sent).
-  var FORM_ENDPOINT = '';
+  // Every "Book..." button will use it. Leave empty to scroll to the Contact Us section.
+  var BOOKING_URL = 'https://www.therapyportal.com/p/victorious/';
+  // Optional: separate links for the two buttons in Our Services (fall back to BOOKING_URL if empty)
+  var BOOKING_URL_CASH = '';
+  var BOOKING_URL_INSURANCE = 'https://secure.helloalma.com/providers/nichole-henderson/';
 
   var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
@@ -22,6 +21,14 @@
       a.setAttribute('rel', 'noopener');
     });
   }
+  [['.js-booking-cash', BOOKING_URL_CASH], ['.js-booking-insurance', BOOKING_URL_INSURANCE]].forEach(function (p) {
+    if (!p[1]) { return; }
+    $$(p[0]).forEach(function (a) {
+      a.setAttribute('href', p[1]);
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+    });
+  });
   // Placeholder "#" links should not jump to the top of the page
   $$('a[data-placeholder-link]').forEach(function (a) {
     a.addEventListener('click', function (e) {
@@ -36,7 +43,7 @@
   function setMenu(open) {
     menu.classList.toggle('hidden', !open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.textContent = open ? 'Close' : 'Menu';
+    $('.menu-label', toggle).textContent = open ? 'Close' : 'Menu';
   }
   toggle.addEventListener('click', function () {
     setMenu(toggle.getAttribute('aria-expanded') !== 'true');
@@ -48,12 +55,46 @@
       toggle.focus();
     }
   });
+  document.addEventListener('click', function (e) {
+    if (toggle.getAttribute('aria-expanded') === 'true' && !e.target.closest('#site-header')) { setMenu(false); }
+  });
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 1024) { setMenu(false); }
   });
 
+  /* ---------- Header: hide on scroll down, show on scroll up ---------- */
+  var header = $('#site-header');
+  var lastY = window.scrollY, ticking = false;
+  function updateHeader() {
+    var y = Math.max(window.scrollY, 0);
+    var menuOpen = toggle.getAttribute('aria-expanded') === 'true';
+    if (menuOpen || y < 80 || y < lastY - 4 || header.contains(document.activeElement)) {
+      header.classList.remove('header-hidden');   // near top, scrolling up, menu open, or keyboard focus inside
+    } else if (y > lastY + 6) {
+      header.classList.add('header-hidden');      // scrolling down
+    }
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(updateHeader); }
+  }, { passive: true });
+  header.addEventListener('focusin', function () { header.classList.remove('header-hidden'); });
+
+  /* ---------- Back-to-top arrow: hidden until ~40% of the page is scrolled ---------- */
+  var toTop = $('#to-top');
+  function updateToTop() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var show = max > 0 && window.scrollY / max >= 0.4;
+    toTop.classList.toggle('is-visible', show);
+    toTop.tabIndex = show ? 0 : -1;
+  }
+  window.addEventListener('scroll', updateToTop, { passive: true });
+  window.addEventListener('resize', updateToTop);
+  updateToTop();
+
   /* ---------- Highlight the current section in the menu ---------- */
-  var spyIds = ['home', 'about', 'services', 'testimonials', 'book-rec', 'book', 'contact'];
+  var spyIds = ['home', 'welcome', 'reviews', 'about', 'services', 'rates', 'book-rec', 'book', 'contact'];
   var spyLinks = $$('#site-header nav a[href^="#"]').filter(function (a) {
     return !a.classList.contains('btn') && a.getAttribute('href').length > 1;
   });
@@ -66,9 +107,10 @@
     } else {
       spyIds.forEach(function (id) {
         var el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= 120) { current = id; }
+        if (el && el.getBoundingClientRect().top <= 160) { current = id; }
       });
     }
+    if (current === 'welcome' || current === 'reviews') { current = 'home'; } // intro + reviews belong to Home
     spyLinks.forEach(function (a) {
       var on = a.getAttribute('href') === '#' + current;
       a.classList.toggle('is-active', on);
@@ -79,66 +121,51 @@
   window.addEventListener('resize', updateActive);
   updateActive();
 
-  /* ---------- Contact form validation ---------- */
-  var form = $('#contact-form');
-  var success = $('#form-success');
-
-  function setError(field, msg) {
-    $('#' + field.id + '-error').textContent = msg;
-    if (msg) { field.setAttribute('aria-invalid', 'true'); } else { field.removeAttribute('aria-invalid'); }
+  /* ---------- Fade-in on scroll ---------- */
+  if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.15 });
+    $$('.reveal').forEach(function (el) { io.observe(el); });
   }
 
-  function validateField(field) {
-    var v = field.value.trim();
-    var msg = '';
-    if (field.id === 'name') {
-      if (!v) { msg = 'Please enter your name.'; }
-    } else if (field.id === 'email') {
-      if (!v) { msg = 'Please enter your email address.'; }
-      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) { msg = 'Please enter a valid email address.'; }
-    } else if (field.id === 'phone') {
-      if (v && !/^[+()\-.\s\d]{7,20}$/.test(v)) { msg = 'Please enter a valid phone number.'; }
-    } else if (field.id === 'message') {
-      if (!v) { msg = 'Please write a short message.'; }
-      else if (v.length < 10) { msg = 'Please add a few more details.'; }
-    }
-    setError(field, msg);
-    return !msg;
-  }
-
-  var fields = ['name', 'email', 'phone', 'message'].map(function (id) { return document.getElementById(id); });
-  fields.forEach(function (f) {
-    f.addEventListener('blur', function () { validateField(f); });
-    f.addEventListener('input', function () { if (f.getAttribute('aria-invalid') === 'true') { validateField(f); } });
-  });
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    success.classList.add('hidden');
-
-    var firstInvalid = null;
-    fields.forEach(function (f) {
-      if (!validateField(f) && !firstInvalid) { firstInvalid = f; }
+  /* ---------- Services accordion: one open at a time ---------- */
+  $$('.acc-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentNode.parentNode;
+      var willOpen = !item.classList.contains('is-open');
+      $$('.acc').forEach(function (a) {
+        a.classList.remove('is-open');
+        $('.acc-btn', a).setAttribute('aria-expanded', 'false');
+      });
+      if (willOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     });
-    if (firstInvalid) { firstInvalid.focus(); return; }
-
-    function done() {
-      form.reset();
-      success.classList.remove('hidden');
-      success.focus();
-    }
-    function fail() {
-      alert('Sorry, something went wrong. Please call or email us directly.');
-    }
-
-    if (FORM_ENDPOINT) {
-      fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
-        .then(function (res) { if (res.ok) { done(); } else { fail(); } })
-        .catch(fail);
-    } else {
-      done(); // No form service connected yet
-    }
   });
+
+  /* ---------- Endorsements carousel (scroll-snap + prev/next, no autoplay) ---------- */
+  var track = $('#endorse-track');
+  var prevBtn = $('#endorse-prev');
+  var nextBtn = $('#endorse-next');
+  if (track && prevBtn && nextBtn) {
+    var step = function () {
+      var card = $('.endorse-card', track);
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+    };
+    var updateArrows = function () {
+      prevBtn.disabled = track.scrollLeft <= 2;
+      nextBtn.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    };
+    prevBtn.addEventListener('click', function () { track.scrollBy({ left: -step() }); });
+    nextBtn.addEventListener('click', function () { track.scrollBy({ left: step() }); });
+    track.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+  }
 
   /* ---------- Footer year ---------- */
   var yr = $('#year');

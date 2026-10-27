@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Victorious Beginnings | Faith-Based Therapy &amp; Counseling (NV &amp; TX)</title>
   <meta name="description" content="Faith-based therapy and wellness with Nichole Henderson. Virtual counseling for individuals, couples, families, first responders and professionals in Nevada and Texas. Book a free 15-minute consultation." />
   <meta name="theme-color" content="#4A2C8F" />
@@ -18,7 +18,7 @@
   <!-- Fonts: Poppins (primary), Lato (body), Playfair Display (secondary) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Tailwind (CDN). Brand: 3 colors, 3 fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +29,9 @@
           colors: {
             royal: '#4A2C8F',  // Royal Purple
             gold: '#D4A62A',   // Victory Gold
-            ivory: '#FBF8F3'   // Warm Ivory
+            ivory: '#FBF8F3',  // Warm Ivory
+            lavender: '#F1ECF8', // Soft Lavender (section tint)
+            'gold-dark': '#8A6A0A' // Dark Gold (gold text on light backgrounds)
           },
           fontFamily: {
             sans: ['Poppins', 'system-ui', 'sans-serif'],   // primary: headings, menu, buttons
@@ -66,40 +68,41 @@
 
 <body class="bg-ivory font-body text-base leading-relaxed text-royal">
 
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:bg-gold focus:px-4 focus:py-2 focus:text-royal">Skip to content</a>
 
   <!-- HEADER -->
-  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/15 bg-ivory">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/10 bg-ivory">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
       <a href="#home" aria-label="Victorious Beginnings, home">
-        <img src="logo.png" alt="Victorious Beginnings" width="120" height="87" class="h-14 w-auto" />
+        <picture>
+          <source media="(max-width: 639px)" srcset="logo-horizontal.png" width="895" height="230" />
+          <img src="logo.png" alt="Victorious Beginnings" width="120" height="87" class="logo-img h-14 w-auto sm:h-16" />
+        </picture>
       </a>
 
       <nav aria-label="Main" class="hidden items-center gap-7 font-sans text-base font-normal xl:gap-8 lg:flex">
         <a class="nav-link" href="#home">Home</a>
-        <a class="nav-link" href="#about">About Nichole</a>
-        <a class="nav-link js-booking" href="#book">Schedule with Me</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <a class="nav-link" href="#rates">Rates</a>
-        <!-- Replace # with the real Ranch page or link -->
-        <a class="nav-link" href="#" data-placeholder-link>The Ranch</a>
+        <a class="nav-link" href="about.html">About Nichole</a>
+        <a class="nav-link" href="work-with-me.html">Schedule with Me</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="https://victoriousbeginnings.square.site/" target="_blank" rel="noopener">Rates</a>
+        <a class="nav-link" href="ranch.html">The Ranch</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#contact" class="js-booking btn hidden xl:inline-block">Book a free consultation</a>
-        <button id="menu-toggle" type="button" class="border border-royal/40 px-4 py-2 font-sans text-sm font-medium lg:hidden" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+        <a href="#contact" class="js-booking btn hidden sm:inline-block">Book now</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
       </div>
     </div>
 
     <div id="mobile-menu" class="hidden border-t border-royal/15 bg-ivory lg:hidden">
       <nav aria-label="Mobile" class="mx-auto flex max-w-6xl flex-col px-5 py-2 font-sans text-base font-normal">
         <a class="border-b border-royal/10 py-3" href="#home">Home</a>
-        <a class="border-b border-royal/10 py-3" href="#about">About Nichole</a>
-        <a class="js-booking border-b border-royal/10 py-3" href="#book">Schedule with Me</a>
-        <a class="border-b border-royal/10 py-3" href="#contact">Contact</a>
-        <a class="border-b border-royal/10 py-3" href="#rates">Rates</a>
-        <a class="py-3" href="#" data-placeholder-link>The Ranch</a>
-        <a href="#contact" class="js-booking btn mb-3 mt-1 text-center">Book a free consultation</a>
+        <a class="border-b border-royal/10 py-3" href="about.html">About Nichole</a>
+        <a class="border-b border-royal/10 py-3" href="work-with-me.html">Schedule with Me</a>
+        <a class="border-b border-royal/10 py-3" href="contact.html">Contact</a>
+        <a class="border-b border-royal/10 py-3" href="https://victoriousbeginnings.square.site/" target="_blank" rel="noopener">Rates</a>
+        <a class="py-3" href="ranch.html">The Ranch</a>
+        <a href="#contact" class="js-booking btn mb-3 mt-1 text-center sm:hidden">Book now</a>
       </nav>
     </div>
   </header>
@@ -107,299 +110,407 @@
   <main id="main">
 
     <!-- HERO -->
-    <section id="home" class="scroll-mt-20">
-      <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 sm:py-16 lg:grid-cols-2 lg:py-20">
-
-        <img src="logo.png" alt="Victorious Beginnings logo: a winged crown above a VB monogram" width="650" height="473" class="mx-auto w-full max-w-sm lg:order-2 lg:max-w-md" />
+    <section id="home" class="scroll-mt-28">
+      <div class="mx-auto grid max-w-6xl items-center gap-8 px-5 py-10 sm:py-14 lg:min-h-[34rem] lg:grid-cols-2 lg:py-16">
 
         <div class="lg:order-1">
+          <p class="kicker">Virtual faith-based therapy for Nevada and Texas</p>
           <h1 class="font-sans text-3xl font-semibold leading-tight sm:text-4xl lg:text-[2.6rem]">
             Embark on Your Journey to a Victorious Life
           </h1>
-          <p class="mt-4 font-serif text-lg italic sm:text-xl">
-            Empowering Lives, Nurturing Souls: Victorious Beginnings &ndash; Where Faith and Resilience Meet
+          <p class="mt-5 font-serif text-lg italic leading-snug sm:text-xl">
+            Empowering Lives, Nurturing Souls:<br />
+            Victorious Beginnings &ndash; Where Faith and Resilience Meet
           </p>
+          <a href="#contact" class="js-booking btn mt-8 text-center">Book your free 15-min consultation</a>
+          <p class="mt-5 text-sm">Prefer to talk first? Call <a class="link" href="tel:+17022783622">702-278-3622</a>.</p>
+        </div>
 
-          <div class="mt-8 max-w-xl space-y-4">
-            <p class="font-serif text-lg italic">Nichole wants to know&hellip;</p>
-            <p>Are you striving for an abundant life? Do you feel seen? Do you feel heard? Where are you going to fill your emotional and spiritual tank?</p>
-            <p>Victorious Beginnings offers specialized faith-based therapy and wellness designed to strengthen and build a Victorious identity. Providing two-way discussions to help you bridge the gap to Victorious Living.</p>
-            <p class="font-semibold">You are never alone.</p>
-          </div>
-
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#contact" class="js-booking btn text-center">Book your free 15-min consultation</a>
-            <a href="#services" class="btn-outline text-center">Our services</a>
+        <div class="hero-photo mx-auto w-full max-w-sm lg:order-2 lg:max-w-md">
+          <span class="blob blob-gold" aria-hidden="true"></span>
+          <span class="blob blob-lav" aria-hidden="true"></span>
+          <div class="portrait relative">
+            <img src="images/portrait-800.jpg"
+                 srcset="images/portrait-480.jpg 480w, images/portrait-800.jpg 800w"
+                 sizes="(min-width: 1024px) 28rem, 90vw"
+                 width="800" height="1000"
+                 alt="Portrait of a smiling woman with locs and glasses, wearing a brown tweed blazer and white blouse, arms crossed" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="scroll-mt-20 border-t border-royal/15 bg-white">
-      <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:py-20 lg:grid-cols-12 lg:gap-14">
-
-        <figure class="lg:col-span-4">
-          <img src="images/nichole.jpg"
-               srcset="images/nichole-480.jpg 480w, images/nichole.jpg 800w"
-               sizes="(min-width: 1024px) 24rem, 90vw"
-               width="800" height="1000" loading="lazy"
-               alt="Nichole Henderson, Founder and CEO of Victorious Beginnings"
-               class="mx-auto aspect-[4/5] w-full max-w-sm object-cover object-top lg:max-w-none" />
-          <figcaption class="mt-3 font-sans text-sm text-royal/80">Nichole Henderson, Founder &amp; CEO</figcaption>
-        </figure>
-
-        <div class="lg:col-span-8">
-          <h2 class="section-title">About Nichole</h2>
-
-          <p class="mt-6 font-serif text-xl leading-snug sm:text-2xl">
-            The journey of a thousand miles begins with a single step towards a Victorious Beginning. Consistency over time creates resiliency over a lifetime!
-          </p>
-
-          <blockquote class="mt-6 border-l-2 border-gold pl-5">
-            <p class="font-serif text-lg italic">Where there is no guidance, the people fall, but in abundance of counselors there is Victory.</p>
-            <footer class="mt-1 font-sans text-sm">Proverbs 11:14</footer>
-          </blockquote>
-
-          <p class="mt-6">
-            I work with a complexity of amazing professionals such as faith leaders, medical doctors, nurses, dentists, police officers, pharmacists, teachers, first responders and farmers who are struggling to manage the demands of their profession. Nichole offers the bridge to self-care and healing. Let&rsquo;s get to work!
-          </p>
-          <p class="mt-4">Nichole <strong>only</strong> provides virtual sessions. In-person sessions by request only.</p>
-          <p class="mt-2">Nichole practices in Nevada and Texas.</p>
-
-          <!-- Professional memberships and "As listed in": unhide when you have the real logos
-          <div hidden id="memberships"> ... </div> -->
+    <!-- NICHOLE WANTS TO KNOW -->
+    <section id="welcome" class="scroll-mt-28 bg-white">
+      <div class="reveal mx-auto max-w-3xl px-5 py-16 text-center sm:py-24">
+        <h2 class="font-serif text-lg italic text-gold-dark">Nichole wants to know&hellip;</h2>
+        <p class="mt-4 font-serif text-2xl leading-snug sm:text-3xl">Are you striving for an abundant life? Do you feel seen? Do you feel heard?</p>
+        <p class="mt-6">Where are you going to feel your emotional and spiritual tank? Victorious Beginnings offers specialized faith-based therapy and wellness designed to strengthen and build a Victorious identity. Providing two-way discussions to help you bridge the gap to Victorious Living.</p>
+        <p class="mt-6 font-sans text-lg font-semibold">You are never alone.</p>
+        <p class="mt-2">Book your free 15-min consultation here</p>
+        <div class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <a href="#contact" class="btn js-booking js-booking-cash text-center">Book Now Cash Pay</a>
+          <a href="#contact" class="btn js-booking js-booking-insurance text-center">Book Now with Insurance</a>
         </div>
+        <a href="#services" class="link mt-6 inline-block font-sans text-sm font-medium">Explore our services &darr;</a>
+      </div>
+    </section>
+
+    <!-- CLIENT REVIEWS + ENDORSEMENTS -->
+    <section id="reviews" class="scroll-mt-28">
+      <div class="mx-auto max-w-6xl px-5 py-14 sm:py-20">
+        <h2 class="section-title text-center">What Are Clients Saying about Nichole?</h2>
+
+        <div class="review-grid mt-10">
+          <figure class="review reveal">
+            <blockquote class="review-quote"><p>Ms. Nichole Henderson is AMAZING! She helps me grow with each session.</p></blockquote>
+            <figcaption class="review-meta">
+              <span class="review-date">Written on Sep 29, 2023</span>
+              <span class="review-detail">After therapy with Nichole for 1 year and 2 months on issues concerning depression, grief, self esteem, career difficulties, and ADHD</span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote class="review-quote"><p>She is wonderful, kind, encouraging and sincere. I appreciate her time and her gift of compassion.</p></blockquote>
+            <figcaption class="review-meta">
+              <span class="review-date">Written on Oct 11, 2022</span>
+              <span class="review-detail">After therapy with Nichole for 7 months on issues concerning stress, anxiety, relationship issues, family conflicts, trauma and abuse, coping with life changes, and compassion fatigue</span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote class="review-quote"><p>Miss Nichole has been an absolute blessing when I assumed therapy would have been useless to me. She truly is like a coach for my mental health and she understands what to recommend for me and where to guide me. And I believe she legitimately cares. She is wonderful.</p></blockquote>
+            <figcaption class="review-meta">
+              <span class="review-date">Written on May 27, 2023</span>
+              <span class="review-detail">After therapy with Nichole for 9 months on issues concerning depression, stress, anxiety, grief, and self esteem</span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote class="review-quote"><p>Nichole being my first therapist, I am impressed by the way I am comfortable with sharing my past pain. It has only been two weeks, and the sessions are going well thus far. Thank you, Nichole.</p></blockquote>
+            <figcaption class="review-meta">
+              <span class="review-date">Written on Mar 10, 2022</span>
+              <span class="review-detail">After therapy with Nichole for 2 weeks on issues concerning relationship issues, family conflicts, self esteem, coping with life changes, and coaching</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENDORSEMENTS + ABOUT (one section) -->
+    <section class="bg-lavender">
+      <div class="mx-auto max-w-5xl px-5 py-12 sm:py-16">
+
+        <!-- Endorsements carousel: scroll-snap track, arrows on the left and right, no autoplay (script.js). -->
+        <div class="endorse" role="region" aria-roledescription="carousel" aria-labelledby="endorse-title">
+          <p class="eyebrow text-center">From fellow professionals</p>
+          <h2 id="endorse-title" class="endorse-title text-center">Endorsements</h2>
+
+          <div class="endorse-stage">
+            <button type="button" class="endorse-btn endorse-btn-prev" id="endorse-prev" aria-label="Previous endorsements" aria-controls="endorse-track"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <ul class="endorse-track" id="endorse-track" tabindex="0" aria-label="Endorsements from colleagues">
+            <li class="endorse-card">
+              <blockquote class="endorse-body">
+                <p class="endorse-quote">I highly recommend Nichole Henderson LMFT. Nichole has over 10 years of professional experience as a Christian Counselor. Her many accolades in her field and the constant extreme high demand for her services speak for itself.</p>
+                <footer class="endorse-person">
+                  <img src="images/endorsements/chanda-kelly.jpg" width="80" height="100" alt="" loading="lazy" decoding="async" />
+                  <div><p class="endorse-name">Chanda Kelly</p><p class="endorse-role">Licensed Professional Counselor<br />MS, LCPC, LPC</p></div>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="endorse-card">
+              <blockquote class="endorse-body">
+                <p class="endorse-quote">Nichole is empathic, caring and meets clients where they are in order to fully support them on their mental health journey.</p>
+                <footer class="endorse-person">
+                  <img src="images/endorsements/alma-spears.jpg" width="80" height="100" alt="" loading="lazy" decoding="async" />
+                  <div><p class="endorse-name">Alma Spears</p><p class="endorse-role">Marriage &amp; Family Therapist<br />MS, MEd, LMFT</p></div>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="endorse-card">
+              <blockquote class="endorse-body">
+                <p class="endorse-quote">Nichole is an excellent model of the skills she teaches clients. Nichole shows care, compassion and concern to her colleagues and her clients. She is very professional and provides high quality treatment to her clients.</p>
+                <footer class="endorse-person">
+                  <img src="images/endorsements/morris-therapy.jpg" width="80" height="100" alt="" loading="lazy" decoding="async" />
+                  <div><p class="endorse-name">Morris Therapy and Counseling</p><p class="endorse-role">Marriage &amp; Family Therapist<br />MS, LMFT-i</p></div>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="endorse-card">
+              <blockquote class="endorse-body">
+                <p class="endorse-quote">Nichole is an insightful therapist.</p>
+                <footer class="endorse-person">
+                  <img src="images/endorsements/laura-fucci.jpg" width="80" height="100" alt="" loading="lazy" decoding="async" />
+                  <div><p class="endorse-name">Laura H. Fucci</p><p class="endorse-role">Marriage &amp; Family Therapist<br />MS, LMFT</p></div>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="endorse-card">
+              <blockquote class="endorse-body">
+                <p class="endorse-quote">Reliable, patient oriented, and great team player provider.</p>
+                <footer class="endorse-person">
+                  <img src="images/endorsements/martin-binyange.jpg" width="80" height="100" alt="" loading="lazy" decoding="async" />
+                  <div><p class="endorse-name">Dr. Martin Binyange</p><p class="endorse-role">Psychiatric Nurse Practitioner<br />DNP, PMHNPBC, MPH</p></div>
+                </footer>
+              </blockquote>
+            </li>
+            </ul>
+            <button type="button" class="endorse-btn endorse-btn-next" id="endorse-next" aria-label="Next endorsements" aria-controls="endorse-track"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+
+        <div id="about" class="scroll-mt-28 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+
+          <div class="hero-photo mx-auto w-full max-w-sm lg:max-w-none">
+            <span class="blob blob-gold" aria-hidden="true"></span>
+            <span class="blob blob-lav" aria-hidden="true"></span>
+            <img src="images/hero-800.png"
+                 srcset="images/hero-480.png 480w, images/hero-800.png 800w"
+                 sizes="(min-width: 1024px) 30rem, 90vw"
+                 width="800" height="800" loading="lazy"
+                 alt="Portrait of a smiling woman with curly hair and glasses, wearing a black top and layered necklace"
+                 class="flip relative w-full" />
+          </div>
+
+          <div class="reveal">
+            <p class="eyebrow">About Nichole</p>
+            <h2 class="section-title">Nichole&rsquo;s Philosophy</h2>
+            <p class="mt-4 font-serif text-lg italic leading-snug">The journey of a thousand miles begins with a single step towards a Victorious Beginning. Consistency over time creates resiliency over a lifetime!</p>
+
+            <blockquote class="verse-line">
+              <p class="verse-text">Where there is no guidance, the people fall, but in abundance of counselors there is Victory.</p>
+              <footer class="verse-ref">Proverbs 11:14</footer>
+            </blockquote>
+
+            <p class="mt-6">I work with a complexity of amazing professionals such; as faith Leaders, sex workers, medical doctors, nurses, dentists, police officers, pharmacists, teachers, first responders &amp; farmers struggling with mental challenges struggling to manage the demands of their profession. Nichole offers the bridge to self-care and healing. Let&rsquo;s get to work!</p>
+            <p class="verse-text mt-5" style="font-size:1rem;font-weight:400">Nichole ONLY provides virtual sessions. In person session by request only.</p>
+            <p class="mt-1 font-sans text-[1rem] font-medium">Nichole Practices in Nevada and Texas</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AS LISTED IN -->
+    <section id="listed" class="scroll-mt-28 bg-royal text-white">
+      <div class="mx-auto max-w-6xl px-5 py-8 text-center sm:py-10">
+        <h2 class="section-title">As listed in:</h2>
+
+        <ul class="logo-grid logo-grid-lg mt-5">
+          <li style="--w:11.8"><img src="images/listed/betterhelp.png" alt="BetterHelp" width="691" height="104" loading="lazy" decoding="async"></li>
+          <li style="--w:8.6"><img src="images/listed/alma.png" alt="Alma" width="436" height="123" loading="lazy" decoding="async"></li>
+          <li style="--w:9.6"><img src="images/listed/psychology-today.png" alt="Psychology Today" width="595" height="137" loading="lazy" decoding="async"></li>
+          <li style="--w:8.4"><img src="images/listed/therapy-for-black-girls.png" alt="Therapy for Black Girls" width="743" height="219" loading="lazy" decoding="async"></li>
+        </ul>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="scroll-mt-20 border-t border-royal/15">
-      <div class="mx-auto max-w-6xl px-5 py-14 sm:py-20">
+    <section id="services" class="scroll-mt-28 border-t border-royal/15">
+      <div class="mx-auto max-w-3xl px-5 py-14 sm:py-20">
         <h2 class="section-title">Our Services</h2>
-        <p class="mt-4 max-w-2xl">Experience quality faith-based counseling from anywhere with our convenient telehealth services.</p>
 
-        <ul class="mt-10 grid gap-x-14 md:grid-cols-2">
-          <li class="service">
-            <h3>Telehealth Counseling</h3>
-            <p>Quality faith-based counseling from anywhere.</p>
-          </li>
-          <li class="service">
-            <h3>Christian Counseling</h3>
-            <p>Find spiritual guidance and mental wellness in a safe and nurturing environment with our endorsed Christian counselor.</p>
-          </li>
-          <li class="service">
-            <h3>Couples Therapy</h3>
-            <p>Strengthen your relationship and find lasting harmony through evidence-based couples therapy.</p>
-          </li>
-          <li class="service">
-            <h3>Individual Therapy</h3>
-            <p>Discover a path to personal growth and resilience with our person-centered approach to individual therapy.</p>
-          </li>
-          <li class="service">
-            <h3>Family Therapy</h3>
-            <p>Heal and grow together as a family with our dedicated support and family-focused therapy.</p>
-          </li>
-          <li class="service">
-            <h3>Grief &amp; Loss</h3>
-            <p>Navigate the challenging journey of grief and loss with our compassionate guidance and emotional support.</p>
-          </li>
-          <li class="service">
-            <h3>First Responders &amp; Professionals</h3>
-            <p>Specialized support for those on the front lines, offering resilience and well-being for our heroes.</p>
-          </li>
-          <li class="service">
-            <h3>Men&rsquo;s Mental Health</h3>
-            <p>Elevating men&rsquo;s mental health: tailored support to empower men on their journey to emotional well-being.</p>
-          </li>
-        </ul>
-
-        <div class="mt-14 bg-royal p-8 text-white sm:p-10">
-          <h3 class="font-sans text-xl font-semibold text-gold sm:text-2xl">Pre-Marital Counseling: Six Sessions</h3>
-          <p class="mt-4 max-w-3xl">
-            Six sessions to help couples thrive towards a healthy and productive marriage and work through specific issues such as communication problems, finances, parenting and careers. Pre-marital counseling provides a safe space for healthy discussion to gain a deeper understanding of each other and work through these issues in the early stages of the relationship, while building a loving biblical foundation for marriage.
-          </p>
+        <div class="acc-list mt-8">
+          <div class="acc is-open">
+            <h3><button type="button" class="acc-btn" id="acc-btn-1" aria-expanded="true" aria-controls="acc-panel-1">Telehealth</button></h3>
+            <div class="acc-panel" id="acc-panel-1" role="region" aria-labelledby="acc-btn-1"><div><p>Experience quality faith-based counseling from anywhere with our convenient telehealth services.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3><button type="button" class="acc-btn" id="acc-btn-2" aria-expanded="false" aria-controls="acc-panel-2">Pastoral Counseling</button></h3>
+            <div class="acc-panel" id="acc-panel-2" role="region" aria-labelledby="acc-btn-2"><div><p>Find spiritual guidance and mental wellness in a safe and nurturing environment with our endorsed Christian counselor.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3><button type="button" class="acc-btn" id="acc-btn-3" aria-expanded="false" aria-controls="acc-panel-3">Couples Therapy</button></h3>
+            <div class="acc-panel" id="acc-panel-3" role="region" aria-labelledby="acc-btn-3"><div><p>Strengthen your relationship and find lasting harmony through evidence-based couples therapy.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3><button type="button" class="acc-btn" id="acc-btn-4" aria-expanded="false" aria-controls="acc-panel-4">Individual Therapy</button></h3>
+            <div class="acc-panel" id="acc-panel-4" role="region" aria-labelledby="acc-btn-4"><div><p>Discover a path to personal growth and resilience with our person-centered approach to individual therapy.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3><button type="button" class="acc-btn" id="acc-btn-5" aria-expanded="false" aria-controls="acc-panel-5">Family Therapy</button></h3>
+            <div class="acc-panel" id="acc-panel-5" role="region" aria-labelledby="acc-btn-5"><div><p>Heal and grow together as a family with our dedicated support and family-focused therapy.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3><button type="button" class="acc-btn" id="acc-btn-6" aria-expanded="false" aria-controls="acc-panel-6">Grief &amp; Loss</button></h3>
+            <div class="acc-panel" id="acc-panel-6" role="region" aria-labelledby="acc-btn-6"><div><p>Navigate the challenging journey of grief and loss with our compassionate guidance and emotional support.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3><button type="button" class="acc-btn" id="acc-btn-7" aria-expanded="false" aria-controls="acc-panel-7">First Responders | Essential Workers Services</button></h3>
+            <div class="acc-panel" id="acc-panel-7" role="region" aria-labelledby="acc-btn-7"><div><p>Specialized support for those on the front lines, offering resilience and well-being for our heroes.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3><button type="button" class="acc-btn" id="acc-btn-8" aria-expanded="false" aria-controls="acc-panel-8">Men&rsquo;s Mental Health</button></h3>
+            <div class="acc-panel" id="acc-panel-8" role="region" aria-labelledby="acc-btn-8"><div><p>Elevating Men&rsquo;s Mental Health: Tailored support to empower men on their journey to emotional well-being.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3><button type="button" class="acc-btn" id="acc-btn-9" aria-expanded="false" aria-controls="acc-panel-9">Pre-Marital Counseling</button></h3>
+            <div class="acc-panel" id="acc-panel-9" role="region" aria-labelledby="acc-btn-9"><div><p>Six sessions to help couples thrive towards a healthy and productive marriage and work through specific issues such as communication problems, finances, parenting and careers. Pre-Marital counseling provides a safe space for healthy discussion to gain a deeper understanding of each other and work through these issues in the early stages of the relationship, while building a loving biblical foundation for marriage.</p></div></div>
+          </div>
         </div>
 
-        <!-- Insurance logos: add real logos here when available -->
-        <p id="rates" class="mt-8 max-w-3xl scroll-mt-24 text-sm">
-          <strong>Rates &amp; insurance:</strong> Please call to verify your health insurance plan to learn what your plan covers: coverage, cost and co-pay.
+        <div class="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <a href="#contact" class="btn js-booking js-booking-cash text-center">Book Now Cash Pay</a>
+          <a href="#contact" class="btn js-booking js-booking-insurance text-center">Book Now with Insurance</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSURANCE -->
+    <section id="rates" class="scroll-mt-28 bg-royal text-white">
+      <div class="mx-auto max-w-5xl px-5 py-8 text-center sm:py-10">
+        <h2 class="section-title">Insurance companies we work with:</h2>
+
+        <ul class="logo-grid mt-6">
+          <li style="--w:7.4"><img src="images/insurance/unitedhealthcare.png" alt="UnitedHealthcare" loading="lazy" decoding="async"></li>
+          <li style="--w:6.5"><img src="images/insurance/oxford-health-plans.png" alt="Oxford Health Plans" loading="lazy" decoding="async"></li>
+          <li style="--w:5.7"><img src="images/insurance/cigna-healthcare.png" alt="Cigna Healthcare" loading="lazy" decoding="async"></li>
+          <li style="--w:9.5"><img src="images/insurance/aetna.png" alt="Aetna" loading="lazy" decoding="async"></li>
+          <li style="--w:5.2"><img src="images/insurance/umr.png" alt="UMR, a UnitedHealthcare company" loading="lazy" decoding="async"></li>
+          <li style="--w:8.6"><img src="images/insurance/oscar.png" alt="Oscar" loading="lazy" decoding="async"></li>
+          <li style="--w:6.7"><img src="images/insurance/uhc-student-resources.png" alt="UnitedHealthcare Student Resources" loading="lazy" decoding="async"></li>
+          <li style="--w:6.1"><img src="images/insurance/all-savers.png" alt="UnitedHealthcare All Savers Alternate Funding" loading="lazy" decoding="async"></li>
+          <li style="--w:8.9"><img src="images/insurance/harvard-pilgrim.png" alt="Harvard Pilgrim Health Care" loading="lazy" decoding="async"></li>
+          <li style="--w:6.5"><img src="images/insurance/bcbs.png" alt="Blue Cross Blue Shield of Massachusetts" loading="lazy" decoding="async"></li>
+        </ul>
+
+        <p class="mx-auto mt-6 max-w-2xl text-sm">
+          Please call to verify your health insurance plan to learn what your plan covers. Coverage/Cost/Co-Pay.
         </p>
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="scroll-mt-20 border-t border-royal/15 bg-white">
-      <div class="mx-auto max-w-6xl px-5 py-14 sm:py-20">
-        <h2 class="section-title">What Are Clients Saying About Nichole?</h2>
-
-        <div class="mt-10 grid gap-10 md:grid-cols-2">
-          <figure class="border-l-2 border-gold pl-5">
-            <blockquote class="font-serif text-lg italic leading-snug">&ldquo;Ms. Nichole Henderson is AMAZING! She helps me grow with each session.&rdquo;</blockquote>
-            <figcaption class="mt-3 text-sm">
-              <span class="font-sans font-medium">Sep 29, 2023</span>, after therapy with Nichole for 1 year and 2 months on issues concerning depression, grief, self esteem, career difficulties, and ADHD
-            </figcaption>
-          </figure>
-
-          <figure class="border-l-2 border-gold pl-5">
-            <blockquote class="font-serif text-lg italic leading-snug">&ldquo;Miss Nichole has been an absolute blessing when I assumed therapy would have been useless to me. She truly is like a coach for my mental health and she understands what to recommend for me and where to guide me. And I believe she legitimately cares. She is wonderful.&rdquo;</blockquote>
-            <figcaption class="mt-3 text-sm">
-              <span class="font-sans font-medium">May 27, 2023</span>, after therapy with Nichole for 9 months on issues concerning depression, stress, anxiety, grief, and self esteem
-            </figcaption>
-          </figure>
-
-          <figure class="border-l-2 border-gold pl-5">
-            <blockquote class="font-serif text-lg italic leading-snug">&ldquo;She is wonderful, kind, encouraging and sincere. I appreciate her time and her gift of compassion.&rdquo;</blockquote>
-            <figcaption class="mt-3 text-sm">
-              <span class="font-sans font-medium">Oct 11, 2022</span>, after therapy with Nichole for 7 months on issues concerning stress, anxiety, relationship issues, family conflicts, trauma and abuse, coping with life changes, and compassion fatigue
-            </figcaption>
-          </figure>
-
-          <figure class="border-l-2 border-gold pl-5">
-            <blockquote class="font-serif text-lg italic leading-snug">&ldquo;Nichole being my first therapist, I am impressed by the way I am comfortable with sharing my past pain. It has only been two weeks, and the sessions are going well thus far. Thank you, Nichole.&rdquo;</blockquote>
-            <figcaption class="mt-3 text-sm">
-              <span class="font-sans font-medium">Mar 10, 2022</span>, after therapy with Nichole for 2 weeks on issues concerning relationship issues, family conflicts, self esteem, coping with life changes, and coaching
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
     <!-- BOOK RECOMMENDATION -->
-    <section id="book-rec" class="scroll-mt-20 border-t border-royal/15">
-      <div class="mx-auto max-w-6xl px-5 py-14 sm:py-20">
-        <h2 class="section-title">Book Recommendation</h2>
+    <section id="book-rec" class="scroll-mt-28 border-t border-royal/15">
+      <div class="mx-auto max-w-5xl px-5 py-14 sm:py-20">
+        <h2 class="section-title text-center">Book Recommendation</h2>
 
-        <!-- To add the cover, put book-cover.jpg in /images and wrap this block in a two-column grid:
-             <img src="images/book-cover.jpg" alt="The Power of I AM book cover" class="w-48"> -->
-        <div class="mt-6 max-w-3xl">
-          <h3 class="font-serif text-2xl italic">The Power of I AM: The Neuroscience of Positive Affirmations</h3>
-          <p class="mt-4">Your words are powerful. Though they are invisible, words can be the driving force of your development, identity, and your creative potential. This beautiful picture book artistically communicates the power of the I AM statement. Spoken with joy, grace, and deeply rooted belief, our family shares our favorite I AM declarations with you and yours.</p>
-          <p class="mt-4">This book is not only a beautiful picture book but has over twenty pages of adult text to help readers understand why saying declarations are powerful. It reviews the power of words, the power of words put to music and movement, and highlights the neuroscience behind these methods of affirmations.</p>
-          <!-- Replace # with the book's purchase link -->
-          <a href="#" data-placeholder-link class="btn-outline mt-6 inline-block">Learn more</a>
+        <div class="book-grid mt-8">
+          <div class="book-images">
+            <img src="images/power-of-i-am-book.jpg" width="300" height="232" alt="Front cover of The Power of I AM: The Neuroscience of Positive Affirmations" loading="lazy" decoding="async">
+            <img src="images/power-of-i-am-book-back.jpg" width="300" height="232" alt="Back cover of The Power of I AM, with the book description and author information" loading="lazy" decoding="async">
+          </div>
+
+          <div class="book-body">
+            <h3 class="contact-heading book-title">The Power of I AM: The Neuroscience of Positive Affirmations</h3>
+            <p class="mt-4">Your words are powerful. Though they are invisible, words can be the driving force of your development, identity, and your creative potential. This beautiful picture book artistically communicates the power of the I AM statement. Spoken with joy, grace, and deeply rooted belief, our family shares our favorite I AM declarations with you and yours.</p>
+            <p class="mt-4">This book is not only a beautiful picture book but has over twenty pages of adult text to help readers understand why saying declarations are powerful. It reviews the power of words, the power of words put to music and movement, and highlights the neuroscience behind these methods of affirmations.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- BOOKING BAND -->
-    <section id="book" class="scroll-mt-20 bg-royal text-white">
-      <div class="mx-auto flex max-w-6xl flex-col items-start gap-6 px-5 py-12 sm:py-14 md:flex-row md:items-center md:justify-between">
-        <div>
-          <h2 class="font-sans text-2xl font-semibold sm:text-3xl">You are never alone.</h2>
-          <p class="mt-2">Book your free 15-minute consultation.</p>
+    <section id="book" class="book-band scroll-mt-28 text-white">
+      <div class="mx-auto max-w-3xl px-5 py-14 text-center sm:py-16">
+        <h2 class="font-sans text-3xl font-semibold sm:text-4xl">You are never alone.</h2>
+        <p class="mt-3 font-serif text-lg italic leading-snug sm:text-xl">Take the first step toward a Victorious Beginning.</p>
+        <div class="mt-7 flex justify-center">
+          <a href="https://secure.helloalma.com/providers/nichole-henderson/" target="_blank" rel="noopener" class="js-booking-insurance book-band-btn">Book with insurance</a>
         </div>
-        <a href="#contact" class="js-booking btn">Book your free consultation</a>
+        <p class="mt-5 text-[0.95rem]">Free 15-minute consultation &middot; or call <a class="book-band-call" href="tel:+17022783622">702-278-3622</a></p>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="scroll-mt-20">
-      <div class="mx-auto max-w-6xl px-5 py-14 sm:py-20">
+    <section id="contact" class="scroll-mt-28">
+      <div class="mx-auto max-w-6xl px-5 py-12 sm:py-14">
         <h2 class="section-title">Contact Us</h2>
 
-        <div class="mt-10 grid gap-12 lg:grid-cols-5">
-
-          <form id="contact-form" class="lg:col-span-3" novalidate>
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label for="name" class="form-label">Name *</label>
-                <input id="name" name="name" type="text" autocomplete="name" required class="form-input" aria-describedby="name-error" />
-                <p id="name-error" class="form-error" aria-live="polite"></p>
-              </div>
-              <div>
-                <label for="email" class="form-label">Email *</label>
-                <input id="email" name="email" type="email" autocomplete="email" required class="form-input" aria-describedby="email-error" />
-                <p id="email-error" class="form-error" aria-live="polite"></p>
-              </div>
-            </div>
-            <div class="mt-5">
-              <label for="phone" class="form-label">Phone (optional)</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" class="form-input" aria-describedby="phone-error" />
-              <p id="phone-error" class="form-error" aria-live="polite"></p>
-            </div>
-            <div class="mt-5">
-              <label for="message" class="form-label">Message *</label>
-              <textarea id="message" name="message" rows="5" required class="form-input" aria-describedby="message-error"></textarea>
-              <p id="message-error" class="form-error" aria-live="polite"></p>
-            </div>
-            <button type="submit" class="btn mt-6">Send message</button>
-            <p id="form-success" class="mt-5 hidden border-l-2 border-gold pl-4" role="status" tabindex="-1">Thank you. Your message has been received and Nichole will be in touch soon.</p>
-            <p class="mt-4 text-sm">Please do not include sensitive health details in this form. If you are in crisis, call or text 988.</p>
-          </form>
-
-          <div class="lg:col-span-2">
-            <h3 class="contact-heading">Our locations</h3>
-            <address class="mt-3 space-y-4 not-italic">
+        <div class="contact-row mt-8">
+          <div>
+            <h3 class="contact-heading contact-heading-icon"><svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 1112 6.500a2.500 2.500 0 010 5z"/></svg>Our locations</h3>
+            <address class="mt-3 space-y-3 not-italic">
               <p>9402 W. Lake Mead Blvd.<br />Las Vegas, NV 89134</p>
               <p>2080 E. Ben White Blvd. Suite 240<br />Austin, TX 78741</p>
-              <p>405 E Laburnum Ave Ste 3<br />PMB 319<br />Richmond, VA 23222</p>
+              <p>405 E Laburnum Ave Ste 3<br />PMB 319 Richmond, VA 23222</p>
             </address>
+          </div>
 
-            <h3 class="contact-heading mt-8">Opening hours</h3>
-            <p class="mt-3">5:00 am to 2:00 pm Pacific Time</p>
+          <div>
+            <h3 class="contact-heading contact-heading-icon"><svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v5.200l4 2.400-.8 1.300L11 13V7h2z"/></svg>Opening hours</h3>
+            <p class="mt-3">Monday, Tuesday, Wednesday, Friday, Saturday</p>
+            <p class="mt-3">5:00 am to 2:00 pm Pacific Standard Time.</p>
+          </div>
 
-            <h3 class="contact-heading mt-8">Call or email</h3>
+          <div>
+            <h3 class="contact-heading contact-heading-icon"><svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.600 10.800a15 15 0 006.600 6.600l2.200-2.200a1 1 0 011-.25 11.400 11.400 0 003.600.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.500a1 1 0 011 1c0 1.250.2 2.450.57 3.600a1 1 0 01-.25 1l-2.200 2.200z"/></svg>Contact</h3>
             <ul class="mt-3 space-y-1">
               <li>Mobile: <a class="link" href="tel:+17025303124">+1 702-530-3124</a></li>
               <li>Office: <a class="link" href="tel:+17022783622">+1 702-278-3622</a></li>
               <li class="break-words">Email: <a class="link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a></li>
             </ul>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="https://www.therapyportal.com/p/victorious/" target="_blank" rel="noopener" class="btn inline-block">Client Portal &amp; Booking</a>
+              <a href="https://www.apa.org/topics/crisis-hotlines" target="_blank" rel="noopener" class="btn-outline inline-block">Crisis Hotlines</a>
+            </div>
           </div>
         </div>
 
-        <div class="mt-14 grid gap-4 border-t border-royal/15 pt-8 sm:grid-cols-2">
-          <!-- Replace # with the real pages -->
-          <a href="#" data-placeholder-link class="link font-sans font-medium">Get help for the elderly &rarr;</a>
-          <a href="#" data-placeholder-link class="link font-sans font-medium">Explore Assisted Living for People with mental health disorders &rarr;</a>
+        <div class="contact-cards mt-10">
+          <div class="contact-card contact-card-photo">
+            <img src="images/contact-family.webp" width="669" height="720" alt="A smiling couple holding their baby" loading="lazy" decoding="async" />
+            <div>
+              <h3 class="font-sans text-lg font-semibold">Get help for the elderly</h3>
+              <p class="mt-1">Explore Assisted Living for People with mental health disorders</p>
+              <a href="https://www.payingforseniorcare.com/assisted-living-for-seniors-with-mental-health-conditions" target="_blank" rel="noopener" class="btn mt-4 inline-block">Visit Website</a>
+            </div>
+          </div>
+          <div class="contact-card contact-card-center">
+            <h3 class="font-sans text-lg font-semibold">How did we do?</h3>
+            <p class="mt-1">Your voice is important to us!</p>
+            <a href="https://www.surveymonkey.com/r/C58N5KH" target="_blank" rel="noopener" class="btn mt-4 inline-block">Client Satisfaction Survey</a>
+          </div>
         </div>
-
-        <p class="mt-10 font-serif text-xl italic">How did we do? Your voice is important to us!</p>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-royal text-white">
-    <div class="mx-auto max-w-6xl px-5 py-12">
-      <div class="grid gap-10 md:grid-cols-3">
-        <div>
-          <a href="#home" class="inline-block bg-white p-2" aria-label="Victorious Beginnings, home">
-            <img src="logo.png" alt="Victorious Beginnings" width="100" height="73" class="h-14 w-auto" />
+  <footer class="site-footer">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" aria-label="Victorious Beginnings, home">
+            <img src="logo.png" alt="Victorious Beginnings" width="200" height="146" class="h-28 w-auto" />
           </a>
-          <p class="mt-4 max-w-xs text-sm">Faith-based therapy and wellness, where faith and resilience meet.</p>
+          <p class="footer-tagline">Consistency over time creates resiliency over a lifetime.</p>
+          <ul class="footer-social" aria-label="Social media">
+            <!-- Replace # with the real profile links -->
+            <li><a href="#" data-placeholder-link aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
+            <li><a href="#" data-placeholder-link aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 9h3.4v11H5zM6.7 3.6a2 2 0 110 4 2 2 0 010-4zM10.5 9h3.2v1.5c.5-.9 1.6-1.8 3.3-1.8 3.4 0 4 2.2 4 5.100V20h-3.400v-5.300c0-1.300 0-2.900-1.800-2.900s-2 1.400-2 2.800V20h-3.400z"/></svg></a></li>
+            <li><a href="#" data-placeholder-link aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0121 7.500v9a4.500 4.500 0 01-4.500 4.500h-9A4.500 4.500 0 013 16.500v-9A4.500 4.500 0 017.500 3zm0 1.800A2.700 2.700 0 004.800 7.500v9a2.700 2.700 0 002.700 2.700h9a2.700 2.700 0 002.700-2.700v-9a2.700 2.700 0 00-2.700-2.700zM12 7.800a4.200 4.200 0 110 8.400 4.200 4.200 0 010-8.400zm0 1.800a2.400 2.400 0 100 4.800 2.400 2.400 0 000-4.800zm4.700-3.300a1 1 0 110 2 1 1 0 010-2z"/></svg></a></li>
+            </ul>
         </div>
 
         <div>
-          <h3 class="font-sans text-sm font-semibold text-gold">Quick links</h3>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li><a class="footer-link" href="#home">Home</a></li>
-            <li><a class="footer-link" href="#about">About Nichole</a></li>
-            <li><a class="footer-link" href="#services">Services</a></li>
-            <li><a class="footer-link" href="#testimonials">Testimonials</a></li>
-            <li><a class="footer-link js-booking" href="#book">Schedule with Me</a></li>
-            <li><a class="footer-link" href="#contact">Contact</a></li>
-            <li><a class="footer-link" href="#rates">Rates</a></li>
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About Nichole</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#rates">Rates &amp; Insurance</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.therapyportal.com/p/victorious/" target="_blank" rel="noopener">Client Portal</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 class="font-sans text-sm font-semibold text-gold">Contact</h3>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li><a class="footer-link" href="tel:+17025303124">Mobile: +1 702-530-3124</a></li>
-            <li><a class="footer-link" href="tel:+17022783622">Office: +1 702-278-3622</a></li>
-            <li class="break-words"><a class="footer-link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a></li>
-            <li>5:00 am to 2:00 pm Pacific Time</li>
-          </ul>
+          <h3 class="footer-heading">Need help now?</h3>
+          <div class="footer-crisis">
+            <p>If you are in crisis, call or text <strong>988</strong>, the Suicide &amp; Crisis Lifeline. It is free and available 24/7.</p>
+            <a href="tel:988" class="crisis-btn">Call 988</a>
+          </div>
         </div>
+
       </div>
 
-      <p class="mt-10 border-t border-white/25 pt-6 text-sm">
-        If you are in crisis, call or text <strong class="text-gold">988</strong> (Suicide &amp; Crisis Lifeline) or call <strong class="text-gold">911</strong>.
-      </p>
-      <p class="mt-3 text-xs">&copy; <span id="year">2026</span> Victorious Beginnings. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p>Copyright &copy; <span id="year">2026</span> | Powered by Victorious Beginnings</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Back to top: appears after scrolling about 40% of the page (script.js) -->
+  <a href="#home" id="to-top" class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 
   <script src="script.js"></script>
 </body>
