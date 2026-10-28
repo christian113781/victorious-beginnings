@@ -167,6 +167,25 @@
     updateArrows();
   }
 
+  /* ---------- Donate modal (Zelle QR) ---------- */
+  var donateModal = $('#donate-modal');
+  var donateOpen = $('#donate-open');
+  if (donateModal && donateOpen) {
+    var closeDonate = function () {
+      if (donateModal.open) { donateModal.close(); }
+    };
+    donateOpen.addEventListener('click', function () {
+      if (typeof donateModal.showModal === 'function') { donateModal.showModal(); }
+      else { donateModal.setAttribute('open', ''); }
+    });
+    $('#donate-close').addEventListener('click', closeDonate);
+    // Click on the dimmed backdrop (outside the box) closes it
+    donateModal.addEventListener('click', function (e) {
+      if (e.target === donateModal) { closeDonate(); }
+    });
+    donateModal.addEventListener('close', function () { donateOpen.focus(); });
+  }
+
   /* ---------- Footer year ---------- */
   var yr = $('#year');
   if (yr) { yr.textContent = new Date().getFullYear(); }

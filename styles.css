@@ -96,7 +96,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* About elements */
 .flip { transform: scaleX(-1); }
-.verse { margin-top: 1.5rem; padding: 1.1rem 1.4rem; border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0; background: #fff; box-shadow: 0 10px 24px -14px rgba(74, 44, 143, 0.4); }
+.verse { margin-top: 1.5rem; padding: 1.1rem 1.4rem; border-left: 10px solid var(--gold); border-radius: 0 12px 12px 0; background: #fff; box-shadow: 0 10px 24px -14px rgba(74, 44, 143, 0.4); }
 .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .tags li { padding: 0.35rem 0.9rem; border-radius: 999px; background: #fff; border: 1px solid rgba(74, 44, 143, 0.2); font-family: 'Poppins', system-ui, sans-serif; font-size: 0.8rem; font-weight: 500; }
 
@@ -468,7 +468,7 @@ p, li, a { overflow-wrap: break-word; }
 .ph-list a { overflow-wrap: anywhere; }
 
 /* Gold accent bar beside a heading */
-.about-h-bar { padding-left: 1rem; border-left: 5px solid var(--gold); }
+.about-h-bar { padding-left: 1.1rem; border-left: 10px solid var(--gold); }
 
 /* Work with me: roomier description text; outline button in all caps like the gold one */
 .wb-text{letter-spacing:.02em;line-height:1.85}
@@ -536,3 +536,128 @@ p, li, a { overflow-wrap: break-word; }
 .rn-role, .rn-donate-quote { font-size: 1.25rem; }
 .rn-give-card h3 { font-size: 1.15rem; }
 .rn-give-card p { font-size: 1rem; }
+
+/* Client reviews: fixed line breaks on every device. Text shrinks with the card width instead of re-wrapping. */
+.review { container-type: inline-size; }
+.review-quote p { white-space: nowrap; font-size: 0.8rem; font-size: clamp(0.6rem, calc(100cqw / 29), 1.05rem); }
+@media (max-width: 479px) { .review { padding-left: 1rem; padding-right: 1rem; } }
+
+/* Endorsements: keep the quote right above the name (no stretched gap in shorter cards) */
+.endorse-body { justify-content: center; }
+.endorse-person { margin-top: 0.9rem; }
+
+/* Philosophy column: fixed line breaks on every device (text scales with column width instead of re-wrapping) */
+.philosophy { container-type: inline-size; }
+.philosophy .verse-text.verse-lato { white-space: nowrap; text-wrap: nowrap; font-size: 0.9rem; font-size: clamp(0.65rem, calc(100cqw / 27), 1.15rem); }
+.philosophy .verse-ref { margin-top: 1.1rem; }
+.philosophy .virtual-note a { white-space: nowrap; font-size: 0.8rem; font-size: clamp(0.6rem, calc(100cqw / 31), 0.95rem); }
+
+/* Contact list: no underline on phone / email links */
+.ph-list .link { text-decoration: none; }
+
+/* Mirrored service-card photos (keeps the hover zoom working) */
+.wb-flip { transform: scaleX(-1); }
+.wb:hover .wb-flip { transform: scale(-1.04, 1.04); }
+
+/* Contact page: light violet hero */
+.ct2-hero { background-color: #E7DEF6; background-image: radial-gradient(circle at 12% 25%, rgba(212, 166, 42, 0.18), transparent 40%), radial-gradient(circle at 88% 80%, rgba(255, 255, 255, 0.7), transparent 50%), linear-gradient(180deg, #DCCFF1 0%, #EDE6F9 100%); }
+
+/* Contact cards: phone / email links plain, no underline or gold highlight */
+.ct2-list .link { text-decoration: none; }
+.ct2-list .link:hover { background: none; text-decoration: underline; text-decoration-color: var(--royal); text-underline-offset: 3px; }
+
+/* Ranch hero title: all caps, a bit larger */
+.rn-title { text-transform: uppercase; letter-spacing: 0.02em; font-size: 2.1rem; }
+@media (min-width: 640px) { .rn-title { font-size: 2.75rem; } }
+@media (min-width: 768px) { .rn-hero-text > .rn-title { max-width: 40rem; } }
+
+/* Ranch hero: light violet gradient with a smooth fade into the photo */
+.rn-hero { background: #EBE3F8; }
+.rn-hero-media::after { background: linear-gradient(to bottom, #EBE3F8 0%, rgba(235,227,248,0) 45%); }
+.rn-tagline { font-weight: 400; color: var(--royal); text-shadow: 0 1px 10px rgba(255, 255, 255, 0.6); }
+.rn-title, .rn-location { text-shadow: 0 1px 10px rgba(255, 255, 255, 0.55); }
+@media (min-width: 768px) {
+  .rn-hero { background: linear-gradient(100deg, #E2D6F4 0%, #EBE3F8 32%, #F4EFFB 100%); }
+  .rn-hero-media::after { background: linear-gradient(to right,
+    rgb(235,227,248) 0%, rgba(235,227,248,0.96) 12%, rgba(235,227,248,0.82) 22%,
+    rgba(235,227,248,0.55) 32%, rgba(235,227,248,0.28) 42%, rgba(235,227,248,0.1) 52%, rgba(235,227,248,0) 62%); }
+}
+
+/* Ranch hero: violet melting into the sunset's peach glow */
+@media (min-width: 768px) {
+  .rn-hero { background: linear-gradient(100deg, #E4DAF5 0%, #EFE4F3 30%, #F8E1D2 60%, #FBE0C8 100%); }
+  .rn-hero-media::after { background: linear-gradient(to right,
+    rgb(240,228,242) 0%, rgba(240,228,242,0.92) 14%, rgba(246,226,220,0.66) 24%,
+    rgba(250,223,203,0.38) 34%, rgba(250,223,203,0.14) 44%, rgba(250,223,203,0) 54%); }
+}
+
+/* Ranch hero v3: softer lilac into apricot (#F9D3AE) */
+@media (min-width: 768px) {
+  .rn-hero { background: linear-gradient(100deg, #EFE5F8 0%, #F5E6EE 30%, #FBDFC6 58%, #F9D3AE 100%); }
+  .rn-hero-media::after { background: linear-gradient(to right,
+    rgb(245,230,238) 0%, rgba(245,230,238,0.92) 14%, rgba(248,224,214,0.66) 24%,
+    rgba(249,211,174,0.42) 34%, rgba(249,211,174,0.16) 44%, rgba(249,211,174,0) 54%); }
+}
+
+/* Ranch hero v4: no violet, warm cream into apricot (#F9D3AE) */
+.rn-hero { background: #FFF1E2; }
+.rn-hero-media::after { background: linear-gradient(to bottom, #FFF1E2 0%, rgba(255,241,226,0) 45%); }
+@media (min-width: 768px) {
+  .rn-hero { background: linear-gradient(100deg, #FFF8F1 0%, #FEEDDD 30%, #FBDFC2 60%, #F9D3AE 100%); }
+  .rn-hero-media::after { background: linear-gradient(to right,
+    rgb(254,237,221) 0%, rgba(254,237,221,0.92) 14%, rgba(252,226,200,0.66) 24%,
+    rgba(249,211,174,0.42) 34%, rgba(249,211,174,0.16) 44%, rgba(249,211,174,0) 54%); }
+}
+
+/* Ranch hero v5: wider, longer, smoother fade into the photo */
+@media (min-width: 768px) {
+  .rn-hero { background: linear-gradient(100deg, #FFF8F1 0%, #FEEDDD 28%, #FCE2C8 50%, #FADAB9 75%, #F9D3AE 100%); }
+  .rn-hero-media { width: 80%; }
+  .rn-hero-media::after { background: linear-gradient(to right,
+    rgb(254,237,221) 0%, rgba(254,236,219,0.95) 24%, rgba(253,230,208,0.84) 34%,
+    rgba(252,226,200,0.68) 44%, rgba(251,220,188,0.5) 54%, rgba(250,215,180,0.33) 64%,
+    rgba(249,211,174,0.18) 74%, rgba(249,211,174,0.07) 84%, rgba(249,211,174,0) 94%); }
+}
+
+/* Ranch hero v6: seamless left edge, silhouettes a bit clearer */
+@media (min-width: 768px) {
+  .rn-hero { background: linear-gradient(90deg, #FFF8F1 0%, #FEF0E3 20%, #FCE4CD 45%, #FADAB9 72%, #F9D3AE 100%); }
+  .rn-hero-media::after { background: linear-gradient(to right,
+    rgb(254,240,227) 0%, rgba(254,240,227,0.94) 18%, rgba(253,233,214,0.8) 30%,
+    rgba(252,226,201,0.56) 41%, rgba(251,220,188,0.34) 52%, rgba(250,215,180,0.17) 63%,
+    rgba(249,211,174,0.06) 74%, rgba(249,211,174,0) 85%); }
+}
+
+/* Ranch intro: organic circle photo (same shape as About page), framed on the horse and rider */
+.rn-photo-link { position: relative; z-index: 1; display: block; }
+.rn-photo-blobs { max-width: 24rem; }
+.rn-photo-blobs img { aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 50%; border-radius: 58% 42% 52% 48% / 46% 54% 46% 54%; box-shadow: 0 24px 48px -24px rgba(74, 44, 143, 0.55); }
+/* softer corners so the horse's head and the rider's head and boots are not clipped */
+.rn-photo-blobs img { border-radius: 44% 40% 43% 41% / 41% 44% 40% 43%; }
+/* Ranch intro role line: Poppins Regular */
+.rn-role { font-family: 'Poppins', system-ui, sans-serif; font-style: normal; font-weight: 400; font-size: 1.1rem; letter-spacing: -0.015em; line-height: 1.2; word-spacing: -0.05em; }
+
+.rn-caps { text-transform: uppercase; }
+
+/* Donate section: plain email text, no underline or gold highlight */
+.rn-plain-link { text-decoration: none; color: inherit; }
+.rn-plain-link:hover { background: none; text-decoration: none; }
+.rn-plain-link { font-weight: 600; }
+/* Donate section email: true semibold (Poppins 600), same spot in the sentence */
+.rn-plain-link { font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 0.93em; letter-spacing: 0; }
+
+/* Donate button opens the Zelle modal */
+.rn-donate-btn { cursor: pointer; }
+.rn-modal { width: min(92vw, 26rem); padding: 0; border: 0; border-radius: 24px; background: transparent; color: var(--royal); overflow: visible; }
+.rn-modal::backdrop { background: rgba(44, 22, 96, 0.55); backdrop-filter: blur(3px); }
+.rn-modal-box { position: relative; padding: 2.25rem 1.75rem 1.9rem; border-radius: 24px; background: var(--ivory, #FBF8F3); border-top: 6px solid var(--gold); box-shadow: 0 30px 60px -20px rgba(44, 22, 96, 0.6); text-align: center; }
+.rn-modal-title { margin: 0; font-family: 'Poppins', system-ui, sans-serif; font-size: 1.6rem; font-weight: 600; line-height: 1.2; }
+.rn-modal-text { margin: 0.9rem auto 0; max-width: 21rem; font-size: 1rem; line-height: 1.6; }
+.rn-modal-qr { display: block; width: 12.5rem; height: auto; margin: 1.4rem auto 0; padding: 0.6rem; border-radius: 16px; background: #fff; box-shadow: 0 12px 28px -16px rgba(74, 44, 143, 0.6); }
+.rn-modal-thanks { margin: 1.2rem 0 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--gold-dark); }
+.rn-modal-close { position: absolute; top: 0.6rem; right: 0.8rem; width: 2.25rem; height: 2.25rem; border: 0; border-radius: 50%; background: transparent; color: var(--royal); font-size: 1.8rem; line-height: 1; cursor: pointer; }
+.rn-modal-close:hover, .rn-modal-close:focus-visible { background: rgba(74, 44, 143, 0.1); }
+
+/* Gold bars sit close to their text */
+.about-h-bar { padding-left: 0.55rem; }
+.verse { padding-left: 0.9rem; }

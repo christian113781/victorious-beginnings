@@ -70,7 +70,7 @@
     <!-- HERO -->
     <section class="rn-hero">
       <div class="rn-hero-text">
-        <h1 class="font-sans text-3xl font-semibold leading-tight sm:text-4xl">Victorious Beginnings Ranch</h1>
+        <h1 class="rn-title font-sans font-semibold leading-tight">Victorious Beginnings Ranch</h1>
         <p class="rn-tagline mt-4">A Safe Haven for the Trafficked and Vulnerable</p>
         <p class="rn-location mt-4">Austin, Texas, USA</p>
       </div>
@@ -80,22 +80,26 @@
     </section>
 
     <!-- ARTICLE -->
-    <section class="bg-white">
-      <div class="mx-auto max-w-5xl px-5 pt-12 sm:pt-16">
+    <section class="bg-ivory">
+      <div class="mx-auto max-w-5xl px-5 pb-12 pt-12 sm:pb-16 sm:pt-16">
         <div class="rn-intro">
           <div class="rn-article">
-        <h2 class="section-title">Nichole Henderson</h2>
+        <h2 class="section-title"><span class="hl">Nichole</span> Henderson</h2>
         <p class="rn-role about-h-bar">Anti-Sex Trafficking Advocate</p>
         <p>Since founding Victorious Beginnings in 2012, I have been dedicated to providing trauma-informed, faith-based behavioral health services to children, individuals, couples, and families from diverse backgrounds.</p>
         <p>My approach is rooted in faith, unconditional acceptance, and the belief that everyone deserves the opportunity to heal and experience wholeness. I trust God to guide the healing process and strive to create a supportive environment where individuals feel seen, heard, and valued.</p>
         <p>Several years ago, a revelation through a dream helped clarify my calling to work with women who have survived sex trafficking and to establish a ministry in Austin, Texas. Although I did not know exactly how this vision would unfold, I continued to trust God&rsquo;s timing and guidance. Since then, I have relocated from Nevada to Austin to pursue this calling.</p>
         <p>As I continue to build support for this mission, I am launching a new branch of Victorious Beginnings: Victorious Beginnings Ranch, a safe haven dedicated to supporting women impacted by sex trafficking. Through community partnerships, outreach, mental health services, and advocacy, my vision is to help foster healing, restore hope, and create opportunities for survivors to build healthier, more fulfilling lives.</p>
           </div>
-        <figure class="rn-photo rn-photo-blobs"><span class="blob blob-gold" aria-hidden="true"></span><span class="blob blob-lav" aria-hidden="true"></span><img src="images/ranch-rider.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Nichole smiling on horseback in a sunlit pasture" /></figure>
+        <figure class="rn-photo rn-photo-blobs"><span class="blob blob-gold" aria-hidden="true"></span><span class="blob blob-lav" aria-hidden="true"></span><a href="https://linktr.ee/nicholehendersonmstherapy" target="_blank" rel="noopener" aria-label="Nichole Henderson on Linktree" class="rn-photo-link"><img src="images/ranch-rider.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Nichole smiling on horseback in a sunlit pasture" /></a></figure>
         </div>
       </div>
+    </section>
+
+    <!-- ABOUT THE RANCH -->
+    <section class="bg-white">
       <div class="rn-article rn-narrow mx-auto max-w-5xl px-5 pb-12 pt-12 sm:pb-16">
-        <h2 class="section-title rn-wide text-center"><span class="hl">About</span> THE VICTORIOUS BEGINNINGS RANCH</h2>
+        <h2 class="section-title rn-wide rn-caps text-center"><span class="hl">About</span> THE VICTORIOUS BEGINNINGS RANCH</h2>
         <h2 class="section-title about-h-bar">Helping Women Recognize Their Worth, Strength, and Potential</h2>
         <p>Victorious Beginnings Ranch empowers women impacted by sex trafficking to begin their journey toward healing, recovery, and independence. Through trauma-informed care, equine-assisted services, holistic health and wellness, education, and skills training, we strive to create a supportive environment where survivors can rebuild their lives and discover their strength.</p>
         <p>Upon completing the program, participants may have opportunities to remain connected to the community through an alumni network, pursue relevant certifications, and access educational and vocational pathways that support their continued growth and independence.</p>
@@ -127,7 +131,7 @@
     </section>
 
     <!-- DONATE -->
-    <section id="donate" class="scroll-mt-28 bg-lavender">
+    <section id="donate" class="scroll-mt-28 bg-ivory">
       <div class="rn-donate mx-auto max-w-4xl px-5 py-14 text-center sm:py-20">
 
         <h2 class="section-title"><span class="hl">Help</span> Build a Safe Haven for Survivors</h2>
@@ -147,8 +151,8 @@
         <h2 class="section-title rn-donate-gap">Be Part of the <span class="hl">Change</span></h2>
         <p class="rn-donate-lead">Together, we can help build a future where survivors are supported, empowered, and given opportunities to thrive.</p>
         <p class="rn-donate-strong">Donate today to help make Victorious Beginnings Ranch a reality.</p>
-        <p class="rn-donate-lead">For more information about supporting our mission, contact <a class="link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a>.</p>
-        <p class="mt-8"><button type="button" class="btn rn-donate-btn">Donate</button></p>
+        <p class="rn-donate-lead">For more information about supporting our mission, contact <a class="rn-plain-link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a>.</p>
+        <p class="mt-8"><button type="button" class="btn rn-donate-btn" id="donate-open" aria-haspopup="dialog">Donate</button></p>
 
       </div>
     </section>
@@ -199,6 +203,17 @@
   </footer>
 
   <a href="#main" id="to-top" class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+  <!-- DONATE MODAL -->
+  <dialog id="donate-modal" class="rn-modal" aria-labelledby="donate-modal-title">
+    <div class="rn-modal-box">
+      <button type="button" class="rn-modal-close" id="donate-close" aria-label="Close">&times;</button>
+      <h2 id="donate-modal-title" class="rn-modal-title">Give with <span class="hl">Zelle</span></h2>
+      <p class="rn-modal-text">Open your banking app, choose Zelle, and scan this QR code to support Victorious Beginnings Ranch.</p>
+      <img class="rn-modal-qr" src="images/zelle-qr.png" width="191" height="178" alt="Zelle QR code for donations to Victorious Beginnings Ranch" />
+      <p class="rn-modal-thanks">Thank you for helping build a safe haven for survivors.</p>
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
