@@ -18,7 +18,7 @@
   <!-- Fonts: Poppins (primary), Lato (body), Playfair Display (secondary) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Tailwind (CDN). Brand: 3 colors, 3 fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -52,7 +52,7 @@
     "description": "Faith-based therapy and wellness with Nichole Henderson. Virtual sessions for clients in Nevada and Texas.",
     "url": "https://victoriousbeginnings.com/",
     "email": "nichole@victoriousbeginnings.org",
-    "telephone": "+1-702-278-3622",
+    "telephone": "+1-702-530-3124",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "9402 W. Lake Mead Blvd.",
@@ -70,11 +70,11 @@
 
 
   <!-- HEADER -->
-  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/10 bg-ivory">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/10 bg-white">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
       <a href="#home" aria-label="Victorious Beginnings, home">
         <picture>
-          <source media="(max-width: 639px)" srcset="logo-horizontal.png" width="895" height="230" />
+          <source media="(max-width: 639px)" srcset="logo-horizontal.png" width="967" height="302" />
           <img src="logo.png" alt="Victorious Beginnings" width="120" height="87" class="logo-img h-14 w-auto sm:h-16" />
         </picture>
       </a>
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden border-t border-royal/15 bg-ivory lg:hidden">
+    <div id="mobile-menu" class="hidden border-t border-royal/15 bg-white lg:hidden">
       <nav aria-label="Mobile" class="mx-auto flex max-w-6xl flex-col px-5 py-2 font-sans text-base font-normal">
         <a class="border-b border-royal/10 py-3" href="#home">Home</a>
         <a class="border-b border-royal/10 py-3" href="about.html">About Nichole</a>
@@ -114,16 +114,15 @@
       <div class="mx-auto grid max-w-6xl items-center gap-8 px-5 py-10 sm:py-14 lg:min-h-[34rem] lg:grid-cols-2 lg:py-16">
 
         <div class="lg:order-1">
-          <p class="kicker">Virtual faith-based therapy for Nevada and Texas</p>
           <h1 class="font-sans text-3xl font-semibold leading-tight sm:text-4xl lg:text-[2.6rem]">
             Embark on Your Journey to a Victorious Life
           </h1>
-          <p class="mt-5 font-serif text-lg italic leading-snug sm:text-xl">
+          <p class="mt-5 font-body text-lg font-light leading-snug sm:text-xl">
             Empowering Lives, Nurturing Souls:<br />
             Victorious Beginnings &ndash; Where Faith and Resilience Meet
           </p>
           <a href="#contact" class="js-booking btn mt-8 text-center">Book your free 15-min consultation</a>
-          <p class="mt-5 text-sm">Prefer to talk first? Call <a class="link" href="tel:+17022783622">702-278-3622</a>.</p>
+          <p class="mt-5 text-sm">Prefer to talk first? Call <a class="link" href="tel:+17025303124">(702) 530-3124</a>.</p>
         </div>
 
         <div class="hero-photo mx-auto w-full max-w-sm lg:order-2 lg:max-w-md">
@@ -143,16 +142,16 @@
     <!-- NICHOLE WANTS TO KNOW -->
     <section id="welcome" class="scroll-mt-28 bg-white">
       <div class="reveal mx-auto max-w-3xl px-5 py-16 text-center sm:py-24">
-        <h2 class="font-serif text-lg italic text-gold-dark">Nichole wants to know&hellip;</h2>
-        <p class="mt-4 font-serif text-2xl leading-snug sm:text-3xl">Are you striving for an abundant life? Do you feel seen? Do you feel heard?</p>
-        <p class="mt-6">Where are you going to feel your emotional and spiritual tank? Victorious Beginnings offers specialized faith-based therapy and wellness designed to strengthen and build a Victorious identity. Providing two-way discussions to help you bridge the gap to Victorious Living.</p>
+        <h2 class="section-title text-center"><span class="hl">Nichole</span> wants to know&hellip;</h2>
+        <p class="mt-4 font-serif text-[1.13rem] italic leading-snug text-gold-dark">Are you striving to live an abundant life? Do you long to feel seen, heard, and understood? Where can you find the emotional and spiritual support you need to thrive?</p>
+        <p class="mt-6 font-body">Victorious Beginnings offers specialized, faith-based therapy and wellness services to help you strengthen your identity, find healing, and move toward a more fulfilling life. Through personalized, two-way conversations grounded in faith, we help you bridge the gap between where you are and Victorious Living.</p>
         <p class="mt-6 font-sans text-lg font-semibold">You are never alone.</p>
         <p class="mt-2">Book your free 15-min consultation here</p>
         <div class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <a href="#contact" class="btn js-booking js-booking-cash text-center">Book Now Cash Pay</a>
+          <a href="#contact" class="btn js-booking js-booking-cash text-center">Book Now with Cash Pay</a>
           <a href="#contact" class="btn js-booking js-booking-insurance text-center">Book Now with Insurance</a>
         </div>
-        <a href="#services" class="link mt-6 inline-block font-sans text-sm font-medium">Explore our services &darr;</a>
+        <a href="#services" class="btn btn-violet mt-6 inline-block text-center">Explore Our Services &darr;</a>
       </div>
     </section>
 
@@ -200,7 +199,6 @@
 
         <!-- Endorsements carousel: scroll-snap track, arrows on the left and right, no autoplay (script.js). -->
         <div class="endorse" role="region" aria-roledescription="carousel" aria-labelledby="endorse-title">
-          <p class="eyebrow text-center">From fellow professionals</p>
           <h2 id="endorse-title" class="endorse-title text-center">Endorsements</h2>
 
           <div class="endorse-stage">
@@ -270,19 +268,17 @@
                  class="relative w-full" />
           </div>
 
-          <div class="reveal">
-            <p class="eyebrow">About Nichole</p>
-            <h2 class="section-title">Nichole&rsquo;s Philosophy</h2>
+          <div class="reveal philosophy">
+            <h2 class="section-title"><span class="hl">Nichole&rsquo;s</span> Philosophy</h2>
             <p class="mt-4 font-serif text-lg italic leading-snug">The journey of a thousand miles begins with a single step towards a Victorious Beginning. Consistency over time creates resiliency over a lifetime!</p>
 
             <blockquote class="verse-line">
-              <p class="verse-text">Where there is no guidance, the people fall, but in abundance of counselors there is Victory.</p>
+              <p class="verse-text verse-lato">Where there is no guidance, the people fall, but in abundance of counselors there is Victory.</p>
               <footer class="verse-ref">Proverbs 11:14</footer>
             </blockquote>
 
             <p class="mt-6">I work with a complexity of amazing professionals such; as faith Leaders, sex workers, medical doctors, nurses, dentists, police officers, pharmacists, teachers, first responders &amp; farmers struggling with mental challenges struggling to manage the demands of their profession. Nichole offers the bridge to self-care and healing. Let&rsquo;s get to work!</p>
-            <p class="verse-text mt-5" style="font-size:1rem;font-weight:400">Nichole ONLY provides virtual sessions. In person session by request only.</p>
-            <p class="mt-1 font-sans text-[1rem] font-medium">Nichole Practices in Nevada and Texas</p>
+            <p class="virtual-note mt-5">Nichole ONLY provides virtual sessions. In person session by request only.</p>
           </div>
         </div>
 
@@ -292,13 +288,13 @@
     <!-- AS LISTED IN -->
     <section id="listed" class="scroll-mt-28 bg-royal text-white">
       <div class="mx-auto max-w-6xl px-5 py-8 text-center sm:py-10">
-        <h2 class="section-title">As listed in:</h2>
+        <h2 class="section-title">As Featured In</h2>
 
         <ul class="logo-grid logo-grid-lg mt-5">
           <li style="--w:11.8"><img src="images/listed/betterhelp.png" alt="BetterHelp" width="691" height="104" loading="lazy" decoding="async"></li>
           <li style="--w:8.6"><img src="images/listed/alma.png" alt="Alma" width="436" height="123" loading="lazy" decoding="async"></li>
           <li style="--w:9.6"><img src="images/listed/psychology-today.png" alt="Psychology Today" width="595" height="137" loading="lazy" decoding="async"></li>
-          <li style="--w:8.4"><img src="images/listed/therapy-for-black-girls.png" alt="Therapy for Black Girls" width="743" height="219" loading="lazy" decoding="async"></li>
+          <li style="--w:7.4"><img src="images/listed/therapy-for-black-girls.png" alt="Therapy for Black Girls" width="900" height="300" loading="lazy" decoding="async"></li>
         </ul>
       </div>
     </section>
@@ -348,7 +344,7 @@
         </div>
 
         <div class="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <a href="#contact" class="btn js-booking js-booking-cash text-center">Book Now Cash Pay</a>
+          <a href="#contact" class="btn js-booking js-booking-cash text-center">Book Now with Cash Pay</a>
           <a href="#contact" class="btn js-booking js-booking-insurance text-center">Book Now with Insurance</a>
         </div>
       </div>
@@ -357,7 +353,7 @@
     <!-- INSURANCE -->
     <section id="rates" class="scroll-mt-28 bg-royal text-white">
       <div class="mx-auto max-w-5xl px-5 py-8 text-center sm:py-10">
-        <h2 class="section-title">Insurance companies we work with:</h2>
+        <h2 class="section-title">Insurance Plans We Accept</h2>
 
         <ul class="logo-grid mt-6">
           <li style="--w:7.4"><img src="images/insurance/unitedhealthcare.png" alt="UnitedHealthcare" loading="lazy" decoding="async"></li>
@@ -373,7 +369,7 @@
         </ul>
 
         <p class="mx-auto mt-6 max-w-2xl text-sm">
-          Please call to verify your health insurance plan to learn what your plan covers. Coverage/Cost/Co-Pay.
+          Please contact us to verify your insurance coverage, including your benefits, copayments, and out-of-pocket costs. Coverage varies by plan.
         </p>
       </div>
     </section>
@@ -385,28 +381,16 @@
 
         <div class="book-grid mt-8">
           <div class="book-images">
-            <img src="images/power-of-i-am-book.jpg" width="300" height="232" alt="Front cover of The Power of I AM: The Neuroscience of Positive Affirmations" loading="lazy" decoding="async">
-            <img src="images/power-of-i-am-book-back.jpg" width="300" height="232" alt="Back cover of The Power of I AM, with the book description and author information" loading="lazy" decoding="async">
+            <a href="https://www.amazon.com/dp/B0CVPML3S1?ref=cm_sw_r_apin_dp_DJP7FAAJG7G5WXAVWG8B_1&amp;ref_=cm_sw_r_apin_dp_DJP7FAAJG7G5WXAVWG8B_1&amp;social_share=cm_sw_r_apin_dp_DJP7FAAJG7G5WXAVWG8B_1&amp;language=en-US" target="_blank" rel="noopener noreferrer" class="book-img-link" title="View The Power of I AM on Amazon"><img src="images/power-of-i-am-book.jpg" width="300" height="232" alt="Front cover of The Power of I AM: The Neuroscience of Positive Affirmations" loading="lazy" decoding="async"></a>
+            <a href="https://www.amazon.com/dp/B0CVPML3S1?ref=cm_sw_r_apin_dp_DJP7FAAJG7G5WXAVWG8B_1&amp;ref_=cm_sw_r_apin_dp_DJP7FAAJG7G5WXAVWG8B_1&amp;social_share=cm_sw_r_apin_dp_DJP7FAAJG7G5WXAVWG8B_1&amp;language=en-US" target="_blank" rel="noopener noreferrer" class="book-img-link" title="View The Power of I AM on Amazon"><img src="images/power-of-i-am-book-back.jpg" width="300" height="232" alt="Back cover of The Power of I AM, with the book description and author information" loading="lazy" decoding="async"></a>
           </div>
 
           <div class="book-body">
             <h3 class="contact-heading book-title">The Power of I AM: The Neuroscience of Positive Affirmations</h3>
-            <p class="mt-4">Your words are powerful. Though they are invisible, words can be the driving force of your development, identity, and your creative potential. This beautiful picture book artistically communicates the power of the I AM statement. Spoken with joy, grace, and deeply rooted belief, our family shares our favorite I AM declarations with you and yours.</p>
-            <p class="mt-4">This book is not only a beautiful picture book but has over twenty pages of adult text to help readers understand why saying declarations are powerful. It reviews the power of words, the power of words put to music and movement, and highlights the neuroscience behind these methods of affirmations.</p>
+            <p class="mt-4">Your words are powerful. Though invisible, they can shape your development, influence your sense of identity, and help unlock your creative potential. The Power of I AM is an illustrated picture book that explores the power of positive affirmations through meaningful declarations, beautiful imagery, and a message rooted in faith.</p>
+            <p class="mt-4">Featuring more than 20 pages of adult-oriented text, this book explores why affirmations matter, how words can influence our thoughts and behaviors, and how music and movement can support the practice of positive declarations.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- BOOKING BAND -->
-    <section id="book" class="book-band scroll-mt-28 text-white">
-      <div class="mx-auto max-w-3xl px-5 py-14 text-center sm:py-16">
-        <h2 class="font-sans text-3xl font-semibold sm:text-4xl">You are never alone.</h2>
-        <p class="mt-3 font-serif text-lg italic leading-snug sm:text-xl">Take the first step toward a Victorious Beginning.</p>
-        <div class="mt-7 flex justify-center">
-          <a href="https://secure.helloalma.com/providers/nichole-henderson/" target="_blank" rel="noopener" class="js-booking-insurance book-band-btn">Book with insurance</a>
-        </div>
-        <p class="mt-5 text-[0.95rem]">Free 15-minute consultation &middot; or call <a class="book-band-call" href="tel:+17022783622">702-278-3622</a></p>
       </div>
     </section>
 
@@ -417,31 +401,25 @@
 
         <div class="contact-row mt-8">
           <div>
-            <h3 class="contact-heading contact-heading-icon"><svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 1112 6.500a2.500 2.500 0 010 5z"/></svg>Our locations</h3>
+            <h3 class="contact-heading contact-heading-icon"><svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 1112 6.500a2.500 2.500 0 010 5z"/></svg>Our location</h3>
             <address class="mt-3 space-y-3 not-italic">
-              <p>9402 W. Lake Mead Blvd.<br />Las Vegas, NV 89134</p>
               <p>2080 E. Ben White Blvd. Suite 240<br />Austin, TX 78741</p>
-              <p>405 E Laburnum Ave Ste 3<br />PMB 319 Richmond, VA 23222</p>
             </address>
           </div>
 
           <div>
             <h3 class="contact-heading contact-heading-icon"><svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v5.200l4 2.400-.8 1.300L11 13V7h2z"/></svg>Opening hours</h3>
-            <p class="mt-3">Monday, Tuesday, Wednesday, Friday, Saturday</p>
-            <p class="mt-3">5:00 am to 2:00 pm Pacific Standard Time.</p>
+            <ul class="hours-days mt-3"><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Friday</li><li>Saturday</li></ul>
+            <p class="hours-time">5:00 am to 2:00 pm Pacific Standard Time.</p>
           </div>
 
           <div>
             <h3 class="contact-heading contact-heading-icon"><svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.600 10.800a15 15 0 006.600 6.600l2.200-2.200a1 1 0 011-.25 11.400 11.400 0 003.600.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.500a1 1 0 011 1c0 1.250.2 2.450.57 3.600a1 1 0 01-.25 1l-2.200 2.200z"/></svg>Contact</h3>
-            <ul class="mt-3 space-y-1">
-              <li>Mobile: <a class="link" href="tel:+17025303124">+1 702-530-3124</a></li>
-              <li>Office: <a class="link" href="tel:+17022783622">+1 702-278-3622</a></li>
-              <li class="break-words">Email: <a class="link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a></li>
+            <ul class="mt-3 space-y-1 ph-list">
+              <li><span class="ph-label">Mobile</span> <a class="link" href="tel:+17025303124">(702) 530-3124</a></li>
+              <li><span class="ph-label">Office</span> <a class="link" href="tel:+17022783622">(702) 278-3622</a></li>
+              <li><span class="ph-label">Email</span> <a class="link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a></li>
             </ul>
-            <div class="mt-4 flex flex-wrap gap-3">
-              <a href="https://www.therapyportal.com/p/victorious/" target="_blank" rel="noopener" class="btn inline-block">Client Portal &amp; Booking</a>
-              <a href="https://www.apa.org/topics/crisis-hotlines" target="_blank" rel="noopener" class="btn-outline inline-block">Crisis Hotlines</a>
-            </div>
           </div>
         </div>
 
@@ -473,12 +451,11 @@
           <a href="#home" aria-label="Victorious Beginnings, home">
             <img src="logo.png" alt="Victorious Beginnings" width="200" height="146" class="h-28 w-auto" />
           </a>
-          <p class="footer-tagline">Consistency over time creates resiliency over a lifetime.</p>
+          <p class="footer-tagline">Rooted in Faith. Growing in Healing. Living Victoriously.</p>
           <ul class="footer-social" aria-label="Social media">
-            <!-- Replace # with the real profile links -->
-            <li><a href="#" data-placeholder-link aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
-            <li><a href="#" data-placeholder-link aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 9h3.4v11H5zM6.7 3.6a2 2 0 110 4 2 2 0 010-4zM10.5 9h3.2v1.5c.5-.9 1.6-1.8 3.3-1.8 3.4 0 4 2.2 4 5.100V20h-3.400v-5.300c0-1.300 0-2.900-1.800-2.900s-2 1.400-2 2.800V20h-3.400z"/></svg></a></li>
-            <li><a href="#" data-placeholder-link aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0121 7.500v9a4.500 4.500 0 01-4.500 4.500h-9A4.500 4.500 0 013 16.500v-9A4.500 4.500 0 017.500 3zm0 1.800A2.700 2.700 0 004.800 7.500v9a2.700 2.700 0 002.700 2.700h9a2.700 2.700 0 002.700-2.700v-9a2.700 2.700 0 00-2.700-2.700zM12 7.800a4.200 4.200 0 110 8.400 4.200 4.200 0 010-8.400zm0 1.800a2.400 2.400 0 100 4.800 2.400 2.400 0 000-4.800zm4.700-3.300a1 1 0 110 2 1 1 0 010-2z"/></svg></a></li>
+                        <li><a href="https://www.facebook.com/VictoriousBeginningsTX/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/nicholehenderson/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 9h3.4v11H5zM6.7 3.6a2 2 0 110 4 2 2 0 010-4zM10.5 9h3.2v1.5c.5-.9 1.6-1.8 3.3-1.8 3.4 0 4 2.2 4 5.100V20h-3.400v-5.300c0-1.300 0-2.900-1.800-2.900s-2 1.400-2 2.800V20h-3.400z"/></svg></a></li>
+            <li><a href="https://www.instagram.com/victoriousbeginningsllc" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0121 7.500v9a4.500 4.500 0 01-4.500 4.500h-9A4.500 4.500 0 013 16.500v-9A4.500 4.500 0 017.500 3zm0 1.800A2.700 2.700 0 004.800 7.500v9a2.700 2.700 0 002.700 2.700h9a2.700 2.700 0 002.700-2.700v-9a2.700 2.700 0 00-2.700-2.700zM12 7.800a4.200 4.200 0 110 8.400 4.200 4.200 0 010-8.400zm0 1.800a2.400 2.400 0 100 4.800 2.400 2.400 0 000-4.800zm4.700-3.300a1 1 0 110 2 1 1 0 010-2z"/></svg></a></li>
             </ul>
         </div>
 
@@ -498,7 +475,7 @@
           <h3 class="footer-heading">Need help now?</h3>
           <div class="footer-crisis">
             <p>If you are in crisis, call or text <strong>988</strong>, the Suicide &amp; Crisis Lifeline. It is free and available 24/7.</p>
-            <a href="tel:988" class="crisis-btn">Call 988</a>
+            <a href="https://www.apa.org/topics/crisis-hotlines" class="crisis-btn" target="_blank" rel="noopener noreferrer">Crisis Hotline</a>
           </div>
         </div>
 

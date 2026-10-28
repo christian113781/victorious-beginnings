@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,11 +31,11 @@
 </head>
 <body class="flex min-h-screen flex-col bg-ivory font-body text-royal">
 
-  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/10 bg-ivory">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/10 bg-white">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
       <a href="index.html#home" aria-label="Victorious Beginnings, home">
         <picture>
-          <source media="(max-width: 639px)" srcset="logo-horizontal.png" width="895" height="230" />
+          <source media="(max-width: 639px)" srcset="logo-horizontal.png" width="967" height="302" />
           <img src="logo.png" alt="Victorious Beginnings" width="120" height="87" class="logo-img h-14 w-auto sm:h-16" />
         </picture>
       </a>
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden border-t border-royal/15 bg-ivory lg:hidden">
+    <div id="mobile-menu" class="hidden border-t border-royal/15 bg-white lg:hidden">
       <nav aria-label="Mobile" class="mx-auto flex max-w-6xl flex-col px-5 py-2 font-sans text-base font-normal">
         <a class="border-b border-royal/10 py-3" href="index.html">Home</a>
         <a class="border-b border-royal/10 py-3" href="about.html">About Nichole</a>
@@ -71,8 +71,7 @@
   <main id="main">
     <section class="ct2-hero text-white">
       <div class="mx-auto max-w-6xl px-5 pb-28 pt-14 text-center sm:pt-20">
-        <p class="ct2-eyebrow">Get in touch</p>
-        <h1 class="font-sans text-4xl font-semibold sm:text-5xl">Contact</h1>
+        <h1 class="font-sans text-4xl font-semibold sm:text-5xl"><span class="hl">Contact</span> Us</h1>
       </div>
     </section>
 
@@ -81,11 +80,9 @@
         <div class="ct2-cards">
           <article class="ct2-card reveal" aria-labelledby="ct-loc">
             <svg class="ct2-icon" viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 1112 6.500a2.500 2.500 0 010 5z"/></svg>
-            <h2 id="ct-loc" class="ct2-h">Our locations</h2>
+            <h2 id="ct-loc" class="ct2-h">Our location</h2>
             <address class="ct2-addr">
-              <p>9402 W. Lake Mead Blvd.<br />Las Vegas, NV 89134</p>
               <p>2080 E. Ben White Blv. Suite 240<br />Austin, TX 78741-6931</p>
-              <p>405 E Laburnum Ave Ste 3<br />PMB 319 Richmond, VA 23222</p>
             </address>
           </article>
 
@@ -102,17 +99,17 @@
             <svg class="ct2-icon" viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M6.600 10.800a15 15 0 006.600 6.600l2.200-2.200a1 1 0 011-.25 11.400 11.400 0 003.600.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.500a1 1 0 011 1c0 1.250.2 2.450.57 3.600a1 1 0 01-.25 1l-2.200 2.200z"/></svg>
             <h2 id="ct-con" class="ct2-h">Contact</h2>
             <ul class="ct2-list">
-              <li><span>Mobile:</span><a class="link" href="tel:+17025303124">+1 702-530-3124</a></li>
-              <li><span>Office:</span><a class="link" href="tel:+17022783622">+1 702-278-3622</a></li>
-              <li><span>Email:</span><a class="link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a></li>
+              <li><span>Mobile</span><a class="link" href="tel:+17025303124">(702) 530-3124</a></li>
+              <li><span>Office</span><a class="link" href="tel:+17022783622">(702) 278-3622</a></li>
+              <li><span>Email</span><a class="link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a></li>
             </ul>
-            <a href="https://www.apa.org/topics/crisis-hotlines" target="_blank" rel="noopener" class="btn-outline ct2-btn">Crisis Hotlines</a>
+            <a href="https://www.apa.org/topics/crisis-hotlines" target="_blank" rel="noopener noreferrer" class="btn btn-violet ct2-btn">Crisis Hotlines</a>
           </article>
         </div>
 
         <div class="ct2-survey reveal">
           <div class="ct2-survey-photo hero-photo">
-            <img src="images/contact-family-blob.png" width="600" height="600" loading="lazy" decoding="async" alt="A smiling couple laughing while holding their baby" />
+            <img class="ct2-survey-logo" src="images/about-logo.png" width="600" height="437" loading="lazy" decoding="async" alt="Victorious Beginnings winged crest logo" />
           </div>
           <div class="ct2-survey-text">
             <h2 class="font-sans text-2xl font-semibold leading-snug sm:text-3xl">How did we do? Your voice is important to us!</h2>
@@ -131,12 +128,11 @@
           <a href="index.html#home" aria-label="Victorious Beginnings, home">
             <img src="logo.png" alt="Victorious Beginnings" width="200" height="146" class="h-28 w-auto" />
           </a>
-          <p class="footer-tagline">Consistency over time creates resiliency over a lifetime.</p>
+          <p class="footer-tagline">Rooted in Faith. Growing in Healing. Living Victoriously.</p>
           <ul class="footer-social" aria-label="Social media">
-            <!-- Replace # with the real profile links -->
-            <li><a href="#" data-placeholder-link aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
-            <li><a href="#" data-placeholder-link aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 9h3.4v11H5zM6.7 3.6a2 2 0 110 4 2 2 0 010-4zM10.5 9h3.2v1.5c.5-.9 1.6-1.8 3.3-1.8 3.4 0 4 2.2 4 5.100V20h-3.400v-5.300c0-1.300 0-2.900-1.800-2.900s-2 1.400-2 2.800V20h-3.400z"/></svg></a></li>
-            <li><a href="#" data-placeholder-link aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0121 7.500v9a4.500 4.500 0 01-4.500 4.500h-9A4.500 4.500 0 013 16.500v-9A4.500 4.500 0 017.500 3zm0 1.800A2.700 2.700 0 004.800 7.500v9a2.700 2.700 0 002.700 2.700h9a2.700 2.700 0 002.700-2.700v-9a2.700 2.700 0 00-2.700-2.700zM12 7.800a4.200 4.200 0 110 8.400 4.200 4.200 0 010-8.400zm0 1.800a2.400 2.400 0 100 4.800 2.400 2.400 0 000-4.800zm4.700-3.300a1 1 0 110 2 1 1 0 010-2z"/></svg></a></li>
+                        <li><a href="https://www.facebook.com/VictoriousBeginningsTX/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/nicholehenderson/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 9h3.4v11H5zM6.7 3.6a2 2 0 110 4 2 2 0 010-4zM10.5 9h3.2v1.5c.5-.9 1.6-1.8 3.3-1.8 3.4 0 4 2.2 4 5.100V20h-3.400v-5.300c0-1.300 0-2.900-1.800-2.900s-2 1.400-2 2.800V20h-3.400z"/></svg></a></li>
+            <li><a href="https://www.instagram.com/victoriousbeginningsllc" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0121 7.500v9a4.500 4.500 0 01-4.500 4.500h-9A4.500 4.500 0 013 16.500v-9A4.500 4.500 0 017.500 3zm0 1.800A2.700 2.700 0 004.800 7.500v9a2.700 2.700 0 002.700 2.700h9a2.700 2.700 0 002.700-2.700v-9a2.700 2.700 0 00-2.700-2.700zM12 7.800a4.200 4.200 0 110 8.400 4.200 4.200 0 010-8.400zm0 1.800a2.400 2.400 0 100 4.800 2.400 2.400 0 000-4.800zm4.700-3.300a1 1 0 110 2 1 1 0 010-2z"/></svg></a></li>
             </ul>
         </div>
 
@@ -156,7 +152,7 @@
           <h3 class="footer-heading">Need help now?</h3>
           <div class="footer-crisis">
             <p>If you are in crisis, call or text <strong>988</strong>, the Suicide &amp; Crisis Lifeline. It is free and available 24/7.</p>
-            <a href="tel:988" class="crisis-btn">Call 988</a>
+            <a href="https://www.apa.org/topics/crisis-hotlines" class="crisis-btn" target="_blank" rel="noopener noreferrer">Crisis Hotline</a>
           </div>
         </div>
 

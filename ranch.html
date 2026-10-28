@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,13 +31,10 @@
 </head>
 <body class="flex min-h-screen flex-col bg-ivory font-body text-royal">
 
-  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/10 bg-ivory">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-royal/10 bg-white">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
       <a href="index.html#home" aria-label="Victorious Beginnings, home">
-        <picture>
-          <source media="(max-width: 639px)" srcset="logo-horizontal.png" width="895" height="230" />
-          <img src="logo.png" alt="Victorious Beginnings" width="120" height="87" class="logo-img h-14 w-auto sm:h-16" />
-        </picture>
+        <img src="images/ranch-logo.png" alt="Victorious Ranch: Herd of the Unheard" width="700" height="595" class="logo-img ranch-logo h-14 w-auto sm:h-16" />
       </a>
 
       <nav aria-label="Main" class="hidden items-center gap-7 font-sans text-base font-normal xl:gap-8 lg:flex">
@@ -55,7 +52,7 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden border-t border-royal/15 bg-ivory lg:hidden">
+    <div id="mobile-menu" class="hidden border-t border-royal/15 bg-white lg:hidden">
       <nav aria-label="Mobile" class="mx-auto flex max-w-6xl flex-col px-5 py-2 font-sans text-base font-normal">
         <a class="border-b border-royal/10 py-3" href="index.html">Home</a>
         <a class="border-b border-royal/10 py-3" href="about.html">About Nichole</a>
@@ -71,17 +68,14 @@
   <main id="main">
 
     <!-- HERO -->
-    <section>
-      <div class="mx-auto grid max-w-5xl items-center gap-8 px-5 py-12 sm:py-16 md:grid-cols-2">
-        <div>
-          <h1 class="font-sans text-3xl font-semibold leading-tight sm:text-4xl">Victorious Beginnings Ranch</h1>
-          <p class="mt-4 font-serif text-xl italic leading-snug">A Safe Haven for the Trafficked and Vulnerable</p>
-          <p class="mt-4 text-sm">Austin, Texas, USA</p>
-        </div>
-        <div class="hero-photo mx-auto w-full max-w-xs">
-          <span class="blob blob-gold" aria-hidden="true"></span>
-          <img src="images/ranch-nichole.png" width="600" height="600" alt="Portrait of Nichole Henderson, smiling, with curly hair and glasses, wearing a black top and a layered necklace" class="relative w-full" />
-        </div>
+    <section class="rn-hero">
+      <div class="rn-hero-text">
+        <h1 class="font-sans text-3xl font-semibold leading-tight sm:text-4xl">Victorious Beginnings Ranch</h1>
+        <p class="rn-tagline mt-4">A Safe Haven for the Trafficked and Vulnerable</p>
+        <p class="rn-location mt-4">Austin, Texas, USA</p>
+      </div>
+      <div class="rn-hero-media">
+        <img src="images/ranch-hero.jpg" width="1800" height="655" alt="Silhouette of a woman resting her forehead against a horse at sunset" />
       </div>
     </section>
 
@@ -91,69 +85,71 @@
         <div class="rn-intro">
           <div class="rn-article">
         <h2 class="section-title">Nichole Henderson</h2>
-        <p class="font-sans font-medium">Anti-Sex Trafficking Advocate</p>
-        <p>Since founding Victorious Beginnings in 2012, I have been blessed to provide trauma-informed, faith-based behavioral and mental health services for children, individuals, families, and couples from all backgrounds and life experiences.</p>
-        <p>I am spirit-led, allowing God to facilitate their healing process through me, with unconditional acceptance. About five years ago, a revelation came to me through a dream that my path was to work with women who are survivors of sex trafficking, and that it would be in Austin.</p>
-        <p>I have been working toward this not knowing quite how it would come together and have since relocated to Austin from Nevada.</p>
-        <p>As I seek support to fulfill my calling, I am starting a new branch of Victorious Beginnings, a safe haven called Victorious Beginnings Ranch. My vision will transform culture and build community through civics, government, outreach, mental health services, and advocacy.</p>
+        <p class="rn-role about-h-bar">Anti-Sex Trafficking Advocate</p>
+        <p>Since founding Victorious Beginnings in 2012, I have been dedicated to providing trauma-informed, faith-based behavioral health services to children, individuals, couples, and families from diverse backgrounds.</p>
+        <p>My approach is rooted in faith, unconditional acceptance, and the belief that everyone deserves the opportunity to heal and experience wholeness. I trust God to guide the healing process and strive to create a supportive environment where individuals feel seen, heard, and valued.</p>
+        <p>Several years ago, a revelation through a dream helped clarify my calling to work with women who have survived sex trafficking and to establish a ministry in Austin, Texas. Although I did not know exactly how this vision would unfold, I continued to trust God&rsquo;s timing and guidance. Since then, I have relocated from Nevada to Austin to pursue this calling.</p>
+        <p>As I continue to build support for this mission, I am launching a new branch of Victorious Beginnings: Victorious Beginnings Ranch, a safe haven dedicated to supporting women impacted by sex trafficking. Through community partnerships, outreach, mental health services, and advocacy, my vision is to help foster healing, restore hope, and create opportunities for survivors to build healthier, more fulfilling lives.</p>
           </div>
-        <figure class="rn-photo rn-photo-blobs"><span class="blob blob-gold" aria-hidden="true"></span><span class="blob blob-lav" aria-hidden="true"></span><img src="images/ranch-horse-new.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Nichole standing beside a black and white horse in a sunlit pasture, resting her hands on its back" /></figure>
+        <figure class="rn-photo rn-photo-blobs"><span class="blob blob-gold" aria-hidden="true"></span><span class="blob blob-lav" aria-hidden="true"></span><img src="images/ranch-rider.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Nichole smiling on horseback in a sunlit pasture" /></figure>
         </div>
       </div>
       <div class="rn-article rn-narrow mx-auto max-w-5xl px-5 pb-12 pt-12 sm:pb-16">
-        <p class="font-sans font-medium">About THE VICTORIOUS BEGINNINGS RANCH</p>
-        <h2 class="section-title">Helping women never doubt that they are Valuable &amp; Powerful</h2>
-        <p>Victorious Beginnings Ranch will succor women in breaking the chains of sexual soul ties via trauma-informed and equestrian therapy and holistic health and wellness via education and training by teaching and mentoring survivors.</p>
-        <p>Once survivors complete the program, they will have the opportunity to remain connected in our community and pay it forward via alumni status within program certifications and endorsed programs, colleges, and self-defense programs. f-defense programs.</p>
-        <p>A University of Texas study conducted in 2016 estimated that 79,000 Texans under the age of 25 had been trafficked for sex at some point in their lives. After their first experience of exploitation, survivors of child sex trafficking spent about 35% of their lives in circumstances of exploitation.</p>
-        <p>Among at-risk participants, 25% of people from the LGBTQ community and 18% of heterosexual females were survivors of sex trafficking. Participants&rsquo; economic instability and lack of healthy, trusted relationships in their lives created ideal conditions for exploitation through force, fraud, or coercion. The full study is accessible online at: <a class="link" href="http://sites.utexas.edu/idvsa/files/2019/03/CSTT-HT-Final-Report-3.26.19.pdf" target="_blank" rel="noopener">http://sites.utexas.edu/ idvsa/files/2019/03/CSTT-HT-Final-Report-3.26.19.pdf</a></p>
-        <p class="font-serif text-xl italic">&ldquo;My calling has always been grounded in servant leadership.&rdquo;</p>
-        <p>I began volunteering in faith-based services, with an internship at a church. I am a Licensed Marriage and Family Therapist. I am pursuing my Ph.D. in Education and Organizational Leadership, I hold a Master of Science Degree in Counseling/ Marriage, Family and Child Therapy, and a Bachelor&rsquo;s Degree in Business Management.</p>
-        <p>I was introduced to the therapeutic benefits of horse equine therapy and have used this modality as a way of creating a comforting space for deep healing from trauma. Horses are intuitive and empathetic in nature, being in their presence can offer breakthroughs in a much shorter timeframe, unlike any traditional talk therapy practices. I am EGALA Certified and will continue to enhance learning experiences for myself and my team to help survivors from a holistic modality.</p>
+        <h2 class="section-title rn-wide text-center"><span class="hl">About</span> THE VICTORIOUS BEGINNINGS RANCH</h2>
+        <h2 class="section-title about-h-bar">Helping Women Recognize Their Worth, Strength, and Potential</h2>
+        <p>Victorious Beginnings Ranch empowers women impacted by sex trafficking to begin their journey toward healing, recovery, and independence. Through trauma-informed care, equine-assisted services, holistic health and wellness, education, and skills training, we strive to create a supportive environment where survivors can rebuild their lives and discover their strength.</p>
+        <p>Upon completing the program, participants may have opportunities to remain connected to the community through an alumni network, pursue relevant certifications, and access educational and vocational pathways that support their continued growth and independence.</p>
 
-        <h2 class="section-title">The Vision</h2>
+        <h2 class="section-title about-h-bar">Understanding the Need</h2>
+        <p>Research highlights the urgent need for comprehensive, trauma-informed support for individuals affected by sex trafficking. A <a class="link" href="http://sites.utexas.edu/idvsa/files/2019/03/CSTT-HT-Final-Report-3.26.19.pdf" target="_blank" rel="noopener">2016 University of Texas study</a> examined the experiences of commercially sexually exploited youth in Texas, underscoring the importance of prevention, intervention, and survivor-centered services.</p>
+        <p>Survivors may face significant barriers to recovery, including economic instability, limited access to resources, and difficulties establishing safe, trusting relationships. Victorious Beginnings Ranch seeks to address these challenges by fostering a community grounded in compassion, empowerment, education, and holistic support.</p>
+        <p class="font-serif text-xl italic">&ldquo;My calling has always been grounded in servant leadership.&rdquo;</p>
+        <p>My journey began with volunteering in faith-based services and completing an internship at a church. I am a Licensed Marriage and Family Therapist and am pursuing a Ph.D. in Education and Organizational Leadership. I also hold a Master of Science in Counseling, with a focus on Marriage, Family, and Child Therapy, and a bachelor&rsquo;s degree in Business Management.</p>
+        <p>I was introduced to the therapeutic benefits of working with horses and recognized the potential of equine-assisted services to create a supportive environment for healing. Horses are sensitive, responsive animals, and interactions with them may help participants develop trust, self-awareness, and emotional regulation as part of a broader therapeutic approach.</p>
+        <p>As an EAGALA-certified professional, I am committed to continuing my education and strengthening my team&rsquo;s ability to support survivors through an integrated approach that addresses emotional, relational, physical, and spiritual well-being.</p>
+
+        <h2 class="section-title"><span class="hl">The</span> Vision</h2>
         <p>My work with survivors is to share messages they can integrate through spiritual practices that are meaningful to their needs as they rebuild their sense of self-worth and identity through the healing journey.</p>
         <p class="font-serif text-xl italic">&ldquo;You are the hero of your own story.&rdquo;</p>
         <p class="font-serif text-xl italic">&ldquo;You are important.&rdquo;</p>
         <p class="font-serif text-xl italic">&ldquo;You are enough.&rdquo;</p>
         <p>My vision is to connect with human service organizations in Nevada and Texas that work with underserved populations and intersect with sexual and domestic violence. Influence and help provide justice to those without a voice in Las Vegas and Texas. We will offer strategic education and mental health programs in both communities.</p>
 
-        <h2 class="rn-same rn-gap">The Pillars</h2>
+        <h2 class="section-title"><span class="hl">The</span> Pillars</h2>
         <p>Pillars of Victorious Beginnings Ranch include:</p>
-        <h3 class="rn-same">A Safe Haven</h3>
+        <h3 class="rn-same about-h-bar">A Safe Haven</h3>
         <p>Creating a safe haven for survivors with access to trauma-informed and equine therapy, continuing education, and an alumni mentorship program.</p>
-        <h3 class="rn-same">A Community</h3>
+        <h3 class="rn-same about-h-bar">A Community</h3>
         <p>Developing community support groups and educational workshops with a toolkit that includes regional resources and education for survivors, family members and supporters, and service providers. Topics include: How to approach survivors and survivor needs coordinate community resources create awareness around challenges and community needs.</p>
-        <h3 class="rn-same">A Support Network</h3>
+        <h3 class="rn-same about-h-bar">A Support Network</h3>
         <p>Connecting a network of regional support through community partnerships for wrap-around care and to raise awareness of the growing sex trafficking epidemic.</p>
       </div>
     </section>
 
     <!-- DONATE -->
     <section id="donate" class="scroll-mt-28 bg-lavender">
-      <div class="rn-article mx-auto max-w-3xl px-5 py-12 sm:py-16">
-        <p class="font-sans font-medium">We need your help.</p>
-        <h2 class="rn-same rn-gap">All funds collected will be used to build capacity and secure a location for our ranch to provide a safe haven for survivors.</h2>
-        <p class="rn-same">Help us raise money for Victorious Beginnings Ranch</p>
-        <p><a href="mailto:nichole@victoriousbeginnings.org?subject=Victorious%20Beginnings%20Ranch%20donation" class="btn inline-block">Donate</a></p>
+      <div class="rn-donate mx-auto max-w-4xl px-5 py-14 text-center sm:py-20">
 
-        <p class="font-sans font-medium">ARE YOU PART OF THE SOLUTION?</p>
-        <h3 class="rn-h3">We need your help.</h3>
-        <p>We know the need is critical and resources are limited to short-term and temporary housing that do not provide the mental health support that survivors need as they begin their healing journey.</p>
-        <p>Funding will be applied directly to the following expenses:</p>
-        <ul class="rn-list">
-          <li>Ranch purchase or rental</li>
-          <li>Housing for survivors</li>
-          <li>Stable rental</li>
-          <li>Website and Marketing Development</li>
-          <li>Fundraising campaigns to build capacity and leverage resources with partners</li>
-          <li>Administrative and Consultant fees</li>
+        <h2 class="section-title"><span class="hl">Help</span> Build a Safe Haven for Survivors</h2>
+        <p class="rn-donate-lead">Your generosity can help Victorious Beginnings Ranch establish a safe haven where survivors of sex trafficking can access supportive housing, trauma-informed care, and resources for healing and rebuilding their lives.</p>
+
+        <h2 class="section-title rn-donate-gap">Your <span class="hl">Donation</span> Makes a Difference</h2>
+        <p class="rn-donate-lead">Funds raised will help support the development and operation of the ranch, including:</p>
+        <ul class="rn-give" role="list">
+          <li class="rn-give-card"><span class="rn-give-num" aria-hidden="true">1</span><h3>Ranch Property</h3><p>Purchasing or leasing a suitable location.</p></li>
+          <li class="rn-give-card"><span class="rn-give-num" aria-hidden="true">2</span><h3>Safe Housing</h3><p>Providing a secure, supportive place for survivors to stay.</p></li>
+          <li class="rn-give-card"><span class="rn-give-num" aria-hidden="true">3</span><h3>Program Development</h3><p>Building partnerships and expanding access to supportive services.</p></li>
+          <li class="rn-give-card"><span class="rn-give-num" aria-hidden="true">4</span><h3>Outreach and Awareness</h3><p>Developing educational materials, marketing, and fundraising initiatives.</p></li>
+          <li class="rn-give-card"><span class="rn-give-num" aria-hidden="true">5</span><h3>Essential Operations</h3><p>Covering necessary administrative and consulting expenses.</p></li>
         </ul>
+        <p class="rn-donate-quote">Every contribution brings us closer to creating a community where survivors can find safety, support, and renewed hope.</p>
 
-        <p class="font-sans font-medium">Want to make a difference?</p>
-        <h2 class="rn-same rn-gap">Donate now and change a life</h2>
-        <p>Contact <a class="link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a> For More Information.</p>
-        <p><a href="mailto:nichole@victoriousbeginnings.org?subject=Victorious%20Beginnings%20Ranch%20donation" class="btn inline-block">Donate</a></p>
+        <h2 class="section-title rn-donate-gap">Be Part of the <span class="hl">Change</span></h2>
+        <p class="rn-donate-lead">Together, we can help build a future where survivors are supported, empowered, and given opportunities to thrive.</p>
+        <p class="rn-donate-strong">Donate today to help make Victorious Beginnings Ranch a reality.</p>
+        <p class="rn-donate-lead">For more information about supporting our mission, contact <a class="link" href="mailto:nichole@victoriousbeginnings.org">nichole@victoriousbeginnings.org</a>.</p>
+        <p class="mt-8"><button type="button" class="btn rn-donate-btn">Donate</button></p>
+
       </div>
     </section>
   </main>
@@ -166,12 +162,11 @@
           <a href="index.html#home" aria-label="Victorious Beginnings, home">
             <img src="logo.png" alt="Victorious Beginnings" width="200" height="146" class="h-28 w-auto" />
           </a>
-          <p class="footer-tagline">Consistency over time creates resiliency over a lifetime.</p>
+          <p class="footer-tagline">Rooted in Faith. Growing in Healing. Living Victoriously.</p>
           <ul class="footer-social" aria-label="Social media">
-            <!-- Replace # with the real profile links -->
-            <li><a href="#" data-placeholder-link aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
-            <li><a href="#" data-placeholder-link aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 9h3.4v11H5zM6.7 3.6a2 2 0 110 4 2 2 0 010-4zM10.5 9h3.2v1.5c.5-.9 1.6-1.8 3.3-1.8 3.4 0 4 2.2 4 5.100V20h-3.400v-5.300c0-1.300 0-2.900-1.800-2.900s-2 1.400-2 2.800V20h-3.400z"/></svg></a></li>
-            <li><a href="#" data-placeholder-link aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0121 7.500v9a4.500 4.500 0 01-4.500 4.500h-9A4.500 4.500 0 013 16.500v-9A4.500 4.500 0 017.500 3zm0 1.800A2.700 2.700 0 004.800 7.500v9a2.700 2.700 0 002.700 2.700h9a2.700 2.700 0 002.700-2.700v-9a2.700 2.700 0 00-2.700-2.700zM12 7.800a4.200 4.200 0 110 8.400 4.200 4.200 0 010-8.400zm0 1.800a2.400 2.400 0 100 4.800 2.400 2.400 0 000-4.800zm4.700-3.300a1 1 0 110 2 1 1 0 010-2z"/></svg></a></li>
+                        <li><a href="https://www.facebook.com/VictoriousBeginningsTX/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/nicholehenderson/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 9h3.4v11H5zM6.7 3.6a2 2 0 110 4 2 2 0 010-4zM10.5 9h3.2v1.5c.5-.9 1.6-1.8 3.3-1.8 3.4 0 4 2.2 4 5.100V20h-3.400v-5.300c0-1.300 0-2.900-1.800-2.900s-2 1.400-2 2.800V20h-3.400z"/></svg></a></li>
+            <li><a href="https://www.instagram.com/victoriousbeginningsllc" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7.500 3h9A4.500 4.500 0 0121 7.500v9a4.500 4.500 0 01-4.500 4.500h-9A4.500 4.500 0 013 16.500v-9A4.500 4.500 0 017.500 3zm0 1.800A2.700 2.700 0 004.800 7.500v9a2.700 2.700 0 002.700 2.700h9a2.700 2.700 0 002.700-2.700v-9a2.700 2.700 0 00-2.700-2.700zM12 7.800a4.200 4.200 0 110 8.400 4.200 4.200 0 010-8.400zm0 1.800a2.400 2.400 0 100 4.800 2.400 2.400 0 000-4.800zm4.700-3.300a1 1 0 110 2 1 1 0 010-2z"/></svg></a></li>
             </ul>
         </div>
 
@@ -191,7 +186,7 @@
           <h3 class="footer-heading">Need help now?</h3>
           <div class="footer-crisis">
             <p>If you are in crisis, call or text <strong>988</strong>, the Suicide &amp; Crisis Lifeline. It is free and available 24/7.</p>
-            <a href="tel:988" class="crisis-btn">Call 988</a>
+            <a href="https://www.apa.org/topics/crisis-hotlines" class="crisis-btn" target="_blank" rel="noopener noreferrer">Crisis Hotline</a>
           </div>
         </div>
 

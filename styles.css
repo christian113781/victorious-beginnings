@@ -113,7 +113,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-brand img { display: block; }
 .footer-social a { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(255, 255, 255, 0.1); color: #fff; transition: background 0.15s ease, color 0.15s ease; }
 .footer-social a:hover { background: #fff; color: #2E2A5E; }
-.footer-heading { margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--gold); display: inline-block; font-family: 'Poppins', system-ui, sans-serif; font-size: 1.2rem; font-weight: 600; color: #fff; }
+.footer-heading { margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--gold); display: inline-block; font-family: 'Poppins', system-ui, sans-serif; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.08em; color: #fff; }
 .site-footer .footer-link { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .site-footer .footer-link:hover { color: #fff; }
 .site-footer a:focus-visible { outline-color: #fff; }
@@ -321,8 +321,8 @@ p, li, a { overflow-wrap: break-word; }
 #mobile-menu nav .btn { margin-top: 0.9rem; margin-bottom: 0; }
 
 /* Phones: horizontal logo (emblem left, name right) */
-@media (max-width: 639px) { #site-header .logo-img { height: 2.85rem; width: auto; } }
-@media (max-width: 359px) { #site-header .logo-img { height: 2.5rem; } }
+@media (max-width: 639px) { #site-header .logo-img { height: 3.4rem; width: auto; max-width: 70vw; object-fit: contain; margin: -0.3rem 0; } }
+@media (max-width: 359px) { #site-header .logo-img { height: 3rem; } }
 
 /* Insurance logos + heading: smaller and tighter (same treatment as "As listed in") */
 #rates .logo-grid { --s: 0.65; gap: 1.25rem 1.5rem; }
@@ -331,7 +331,7 @@ p, li, a { overflow-wrap: break-word; }
 #rates .section-title { font-size: 1.35rem; }
 
 /* Header: solid background so page text never shows through; soft shadow separates it from content */
-#site-header { background: var(--ivory); box-shadow: 0 6px 16px -12px rgba(74, 44, 143, 0.35); }
+#site-header { background: #fff; box-shadow: 0 6px 16px -12px rgba(74, 44, 143, 0.35); }
 
 /* Header slides away when scrolling down and returns when scrolling up (all devices) */
 #site-header { transition: transform 0.3s ease; will-change: transform; }
@@ -358,7 +358,7 @@ p, li, a { overflow-wrap: break-word; }
 .wb{position:relative;display:flex;align-items:flex-end;min-height:22rem;overflow:hidden;border-radius:24px;color:#fff;box-shadow:0 18px 40px -24px rgba(74,44,143,.7);isolation:isolate}
 .wb-img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .wb:hover .wb-img{transform:scale(1.04)}
-.wb::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(44,22,96,.95) 0%,rgba(44,22,96,.75) 45%,rgba(44,22,96,.25) 100%)}
+.wb::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(44,22,96,.95) 0%,rgba(44,22,96,.85) 50%,rgba(44,22,96,.7) 75%,rgba(44,22,96,.25) 100%)}
 .wb-body{width:100%;padding:1.75rem 1.5rem}
 .wb-title{margin:0;font-family:'Poppins',system-ui,sans-serif;font-size:1.6rem;font-weight:600;line-height:1.2;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 .wb-title::after{content:"";display:block;width:3rem;height:4px;margin-top:.75rem;border-radius:4px;background:var(--gold)}
@@ -369,8 +369,8 @@ p, li, a { overflow-wrap: break-word; }
 .wb .btn-outline:hover,.wb .btn-outline:focus-visible{background:#fff;color:var(--royal)}
 @media(min-width:768px){
   .wb{min-height:20rem;align-items:center}
-  .wb::before{background:linear-gradient(to right,rgba(44,22,96,.95) 0%,rgba(44,22,96,.82) 38%,rgba(44,22,96,.15) 85%)}
-  .wb-rev::before{background:linear-gradient(to left,rgba(44,22,96,.95) 0%,rgba(44,22,96,.82) 38%,rgba(44,22,96,.15) 85%)}
+  .wb::before{background:linear-gradient(to right,rgba(44,22,96,.95) 0%,rgba(44,22,96,.85) 50%,rgba(44,22,96,.7) 75%,rgba(44,22,96,.15) 100%)}
+  .wb-rev::before{background:linear-gradient(to left,rgba(44,22,96,.95) 0%,rgba(44,22,96,.85) 50%,rgba(44,22,96,.7) 75%,rgba(44,22,96,.15) 100%)}
   .wb-body{width:55%;padding:2.5rem 3rem}
   .wb-rev{justify-content:flex-end}
   .wb-title{font-size:2rem}
@@ -420,3 +420,119 @@ p, li, a { overflow-wrap: break-word; }
 /* Ranch photo with decorative blobs (blobs must not be clipped) */
 .rn-photo-blobs{position:relative;overflow:visible;box-shadow:none;border-radius:0}
 .rn-photo-blobs img{position:relative;z-index:1;border-radius:16px;box-shadow:0 18px 40px -24px rgba(74,44,143,.6)}
+
+/* Violet button variant (white text on royal violet), same size as .btn */
+.btn.btn-violet { background: var(--royal); border-color: var(--royal); color: #fff; text-shadow: none; box-shadow: 0 6px 16px -6px rgba(74, 44, 143, 0.6); }
+.btn.btn-violet:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+/* Testimonial quotes: Poppins Light, upright (all review + endorsement quotes) */
+.review-quote, .endorse-quote { font-family: 'Poppins', system-ui, sans-serif; font-weight: 300; font-style: normal; line-height: 1.7; }
+.review-quote { font-size: 1rem; }
+
+/* Nichole's Philosophy section */
+.philosophy p, .philosophy .verse-ref { letter-spacing: 0.02em; line-height: 1.8; }
+.philosophy .verse-text.verse-lato { font-family: 'Lato', system-ui, sans-serif; font-style: normal; font-weight: 300; font-size: 1.15rem; color: var(--gold-dark); line-height: 1.8; }
+.philosophy .verse-ref { font-family: 'Lato', system-ui, sans-serif; font-weight: 400; font-size: 0.95rem; color: var(--gold-dark); }
+.philosophy .virtual-note { font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; line-height: 1.8; }
+
+/* Endorsements: heading size matches section titles; consistent, roomier comment spacing */
+.endorse-title { font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.2; }
+.review-quote, .endorse-quote { letter-spacing: 0.02em; line-height: 1.8; }
+.endorse-quote { font-size: 1.1rem; }
+.review-quote { font-size: 1.05rem; }
+.review-detail, .endorse-role { letter-spacing: 0.02em; line-height: 1.6; }
+/* Endorser block: a little bigger */
+.endorse-person img { width: 3.5rem; height: 3.5rem; }
+.endorse-name { font-size: 1.05rem; letter-spacing: 0.02em; }
+.endorse-role { font-size: 0.9rem; }
+
+/* Book recommendation: linked cover images + roomier text */
+.book-img-link { display: block; transition: transform 0.2s ease; }
+.book-img-link:hover, .book-img-link:focus-visible { transform: translateY(-3px); }
+.book-img-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+.book-body p { letter-spacing: 0.02em; line-height: 1.85; }
+
+/* Our Services: roomier text for readability */
+.acc-btn { letter-spacing: 0.03em; }
+.acc-panel p { letter-spacing: 0.02em; line-height: 1.85; }
+
+/* Opening hours: one day per line, then the time after a gap */
+.hours-days, .ct2-days { display: block; margin: 0; padding: 0; list-style: none; }
+.hours-days li, .ct2-days li { display: block; padding: 0; border-radius: 0; background: none; font-family: inherit; font-size: inherit; font-weight: 400; line-height: 1.7; }
+.hours-time, .ct2-time { margin-top: 1.25rem; font-weight: 400; }
+.ph-label { display: inline-block; min-width: 4.5rem; font-weight: 600; }
+
+/* Contact rows (Mobile / Office / Email): same label + value styling */
+.ph-list li { display: flex; align-items: baseline; gap: 0.75rem; }
+.ph-list .ph-label { flex: none; min-width: 4.5rem; font-weight: 700; }
+.ph-list a { overflow-wrap: anywhere; }
+
+/* Gold accent bar beside a heading */
+.about-h-bar { padding-left: 1rem; border-left: 5px solid var(--gold); }
+
+/* Work with me: roomier description text; outline button in all caps like the gold one */
+.wb-text{letter-spacing:.02em;line-height:1.85}
+.wb .btn-outline{text-transform:uppercase;font-weight:600;letter-spacing:.06em}
+
+/* Survey band: logo centred in its column, nudged slightly right */
+.ct2-survey-photo { display: flex; align-items: center; justify-content: center; }
+.ct2-survey-photo .ct2-survey-logo { width: 100%; max-width: 16rem; margin: 0 auto; transform: translateX(0.75rem); }
+@media (min-width: 768px) { .ct2-survey-photo .ct2-survey-logo { transform: translateX(2.5rem); } }
+
+/* Highlighted heading word: gold block with white text, like the buttons */
+.hl { display: inline-block; padding: 0.05em 0.4em; border-radius: 8px; background: var(--gold); color: #fff; text-shadow: 0 1px 2px rgba(74, 44, 143, 0.45); box-shadow: 0 6px 16px -6px rgba(212, 166, 42, 0.6); }
+
+/* Ranch page: header logo + hero banner (text left, photo right fading into white) */
+#site-header .ranch-logo { height: 3.5rem; width: auto; }
+@media (min-width: 640px) { #site-header .ranch-logo { height: 4rem; } }
+@media (max-width: 639px) { #site-header .logo-img.ranch-logo { height: 3.4rem; max-width: 70vw; margin: -0.3rem 0; } }
+@media (max-width: 359px) { #site-header .logo-img.ranch-logo { height: 3rem; } }
+.rn-hero { position: relative; overflow: hidden; display: flex; flex-direction: column; background: #fff; }
+.rn-hero-text { position: relative; z-index: 2; padding: 2.5rem 1.25rem 1rem; }
+.rn-tagline { font-family: 'Lato', system-ui, sans-serif; font-weight: 300; font-size: 1.25rem; letter-spacing: 0.02em; line-height: 1.5; }
+.rn-location { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1.05rem; }
+.rn-hero-media { position: relative; width: 100%; height: 14rem; }
+.rn-hero-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 40% center; }
+.rn-hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0) 45%); }
+@media (min-width: 768px) {
+  .rn-hero { display: block; min-height: 23rem; }
+  .rn-hero-text { position: relative; z-index: 2; max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; min-height: 23rem; display: flex; flex-direction: column; justify-content: center; }
+  .rn-hero-text > * { max-width: 28rem; }
+  .rn-hero-media { position: absolute; top: 0; right: 0; bottom: 0; width: 68%; height: auto; }
+  .rn-hero-media img { object-position: 35% center; }
+  .rn-hero-media::after { background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0.8) 8%, rgba(255,255,255,0) 30%); }
+}
+
+/* Ranch intro role line */
+.rn-role { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1.2rem; }
+
+/* Ranch page: gold-bar subtopics sit one step below the main heading */
+.rn-article .section-title.about-h-bar { font-size: 1.5rem; line-height: 1.3; }
+
+/* Ranch page: donate section */
+.rn-donate-lead { max-width: 44rem; margin: 1.1rem auto 0; }
+.rn-donate-gap { margin-top: 4rem; }
+.rn-donate-strong { max-width: 44rem; margin: 1.5rem auto 0; font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; color: var(--royal); }
+.rn-donate-quote { max-width: 40rem; margin: 2rem auto 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1.2rem; line-height: 1.45; color: var(--gold-dark); }
+.rn-give { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: 1fr; text-align: left; }
+.rn-give-card { position: relative; background: #fff; border-radius: 14px; border-top: 4px solid var(--gold); padding: 1.4rem 1.3rem 1.4rem; box-shadow: 0 10px 24px -14px rgba(74, 44, 143, 0.4); }
+.rn-give-num { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 999px; background: var(--gold); color: #fff; font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; text-shadow: 0 1px 2px rgba(74, 44, 143, 0.45); }
+.rn-give-card h3 { margin-top: 0.85rem; font-family: 'Poppins', system-ui, sans-serif; font-size: 1.1rem; font-weight: 600; line-height: 1.3; color: var(--royal); }
+.rn-give-card p { margin-top: 0.4rem; font-size: 0.98rem; line-height: 1.5; }
+@media (min-width: 768px) {
+  .rn-give { grid-template-columns: repeat(6, 1fr); }
+  .rn-give-card { grid-column: span 2; }
+  .rn-give-card:nth-child(4) { grid-column: 2 / span 2; }
+  .rn-give-card:nth-child(5) { grid-column: 4 / span 2; }
+}
+.rn-donate-btn { cursor: default; }
+
+/* Ranch page: final type scale
+   Main topics 1.6-2.2rem (fluid) > subtopics 1.5rem > pillar titles 1.25rem
+   > pull quotes / role line 1.25rem > body 1.0625rem at 1.7 line height */
+.rn-narrow > .rn-wide { max-width: 60rem; }
+.rn-article p:not([class]), .rn-donate-lead { font-size: 1.0625rem; line-height: 1.7; }
+.rn-article h3.rn-same { font-size: 1.25rem; }
+.rn-role, .rn-donate-quote { font-size: 1.25rem; }
+.rn-give-card h3 { font-size: 1.15rem; }
+.rn-give-card p { font-size: 1rem; }
