@@ -94,7 +94,7 @@
   updateToTop();
 
   /* ---------- Highlight the current section in the menu ---------- */
-  var spyIds = ['home', 'welcome', 'reviews', 'about', 'services', 'rates', 'book-rec', 'book', 'contact'];
+  var spyIds = ['home', 'welcome', 'reviews', 'about', 'services', 'rates', 'book', 'contact'];
   var spyLinks = $$('#site-header nav a[href^="#"]').filter(function (a) {
     return !a.classList.contains('btn') && a.getAttribute('href').length > 1;
   });

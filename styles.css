@@ -145,12 +145,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (min-width: 900px) { .logo-grid { --s: 1.25; gap: 2.5rem 3rem; } }
 
 
-/* ---------- Book recommendation ---------- */
-.book-grid { display: grid; gap: 1.75rem; max-width: 40rem; margin-left: auto; margin-right: auto; text-align: center; }
-.book-images { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
-.book-images img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(74, 44, 143, 0.18); }
-.book-title { font-size: 1.15rem; line-height: 1.35; }
-
 
 /* ---------- Contact ---------- */
 .contact-row { display: grid; gap: 2rem; }
@@ -383,7 +377,7 @@ p, li, a { overflow-wrap: break-word; }
 .ct2-main{padding-bottom:4rem}
 .ct2-cards{position:relative;z-index:1;display:grid;gap:1.25rem;margin-top:-5rem}
 .ct2-card{padding:0 1.6rem 1.8rem;border-radius:22px;background:#fff;border:1px solid rgba(74,44,143,.1);border-top:5px solid var(--gold);box-shadow:0 22px 44px -26px rgba(74,44,143,.7);text-align:center}
-.ct2-icon{box-sizing:content-box;display:block;margin:-1.7rem auto 1rem;padding:.9rem;border-radius:50%;background:var(--royal);color:var(--gold);border:4px solid #fff;box-shadow:0 8px 18px -8px rgba(74,44,143,.7)}
+.ct2-icon{box-sizing:content-box;display:block;margin:-1.7rem auto 1rem;padding:.9rem;border-radius:50%;background:var(--royal);color:#fff;border:4px solid #fff;box-shadow:0 8px 18px -8px rgba(74,44,143,.7)}
 .ct2-h{margin:0 0 1rem;font-family:'Poppins',system-ui,sans-serif;font-size:1.2rem;font-weight:600;color:var(--royal)}
 .ct2-addr{font-style:normal}.ct2-addr p+p{margin-top:.9rem}
 .ct2-days{display:flex;flex-wrap:wrap;justify-content:center;gap:.45rem;margin:0;padding:0;list-style:none}
@@ -431,8 +425,8 @@ p, li, a { overflow-wrap: break-word; }
 
 /* Nichole's Philosophy section */
 .philosophy p, .philosophy .verse-ref { letter-spacing: 0.02em; line-height: 1.8; }
-.philosophy .verse-text.verse-lato { font-family: 'Lato', system-ui, sans-serif; font-style: normal; font-weight: 300; font-size: 1.15rem; color: var(--gold-dark); line-height: 1.8; }
-.philosophy .verse-ref { font-family: 'Lato', system-ui, sans-serif; font-weight: 400; font-size: 0.95rem; color: var(--gold-dark); }
+.philosophy .verse-text.verse-lato { font-family: 'Lato', system-ui, sans-serif; font-style: normal; font-weight: 700; font-size: 1.15rem; color: var(--gold-dark); line-height: 1.8; }
+.philosophy .verse-ref { font-family: 'Lato', system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--gold-dark); }
 .philosophy .virtual-note { font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; line-height: 1.8; }
 
 /* Endorsements: heading size matches section titles; consistent, roomier comment spacing */
@@ -445,12 +439,6 @@ p, li, a { overflow-wrap: break-word; }
 .endorse-person img { width: 3.5rem; height: 3.5rem; }
 .endorse-name { font-size: 1.05rem; letter-spacing: 0.02em; }
 .endorse-role { font-size: 0.9rem; }
-
-/* Book recommendation: linked cover images + roomier text */
-.book-img-link { display: block; transition: transform 0.2s ease; }
-.book-img-link:hover, .book-img-link:focus-visible { transform: translateY(-3px); }
-.book-img-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
-.book-body p { letter-spacing: 0.02em; line-height: 1.85; }
 
 /* Our Services: roomier text for readability */
 .acc-btn { letter-spacing: 0.03em; }
@@ -548,7 +536,7 @@ p, li, a { overflow-wrap: break-word; }
 
 /* Philosophy column: fixed line breaks on every device (text scales with column width instead of re-wrapping) */
 .philosophy { container-type: inline-size; }
-.philosophy .verse-text.verse-lato { white-space: nowrap; text-wrap: nowrap; font-size: 0.9rem; font-size: clamp(0.65rem, calc(100cqw / 27), 1.15rem); }
+.philosophy .verse-text.verse-lato { white-space: nowrap; text-wrap: nowrap; font-size: 0.9rem; font-size: clamp(0.65rem, calc(100cqw / 29), 1.15rem); }
 .philosophy .verse-ref { margin-top: 1.1rem; }
 .philosophy .virtual-note a { white-space: nowrap; font-size: 0.8rem; font-size: clamp(0.6rem, calc(100cqw / 31), 0.95rem); }
 
@@ -661,3 +649,11 @@ p, li, a { overflow-wrap: break-word; }
 /* Gold bars sit close to their text */
 .about-h-bar { padding-left: 0.55rem; }
 .verse { padding-left: 0.9rem; }
+
+/* Contact page: the Contact card is a link to Linktree; phone, email and Crisis Hotline keep their own links */
+.ct2-card { position: relative; }
+.ct2-stretch { color: inherit; text-decoration: none; }
+.ct2-stretch::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 22px; cursor: pointer; }
+.ct2-stretch:focus-visible { outline: none; }
+.ct2-stretch:focus-visible::after { outline: 3px solid var(--gold); outline-offset: 2px; }
+.ct2-card .ct2-list a, .ct2-card .ct2-btn { position: relative; z-index: 2; }
