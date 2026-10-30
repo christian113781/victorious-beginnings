@@ -687,3 +687,5 @@ p, li, a { overflow-wrap: break-word; }
 .speak-figure .blob-lav { width: 36%; bottom: 4%; left: -14%; }
 .speak-photo-blob { position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 20%; border-radius: 42% 38% 44% 40% / 32% 30% 38% 36%; box-shadow: 0 22px 44px -26px rgba(74, 44, 143, 0.55); }
 @media (min-width: 640px) { .speak-figure { width: 11rem; margin: 0.5rem 1.25rem 0.5rem 0.75rem; } }
+/* Speaking, Candid and Volunteer buttons: violet, no hover change */
+.speak-btn, .speak-btn:hover, .speak-btn:focus-visible, .rn-trust-btn, .rn-trust-btn:hover, .rn-trust-btn:focus-visible { background: var(--royal); border-color: var(--royal); color: #fff; text-shadow: none; box-shadow: 0 6px 16px -6px rgba(74, 44, 143, 0.55); }
