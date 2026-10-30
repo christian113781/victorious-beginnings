@@ -425,8 +425,8 @@ p, li, a { overflow-wrap: break-word; }
 
 /* Nichole's Philosophy section */
 .philosophy p, .philosophy .verse-ref { letter-spacing: 0.02em; line-height: 1.8; }
-.philosophy .verse-text.verse-lato { font-family: 'Lato', system-ui, sans-serif; font-style: normal; font-weight: 700; font-size: 1.15rem; color: var(--gold-dark); line-height: 1.8; }
-.philosophy .verse-ref { font-family: 'Lato', system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--gold-dark); }
+.philosophy .verse-text.verse-lato { font-family: 'Lato', system-ui, sans-serif; font-style: normal; font-weight: 700; font-size: 1rem; color: var(--gold-dark); line-height: 1.8; }
+.philosophy .verse-ref { font-family: 'Lato', system-ui, sans-serif; font-style: normal; font-weight: 700; font-size: 1rem; color: var(--gold-dark); }
 .philosophy .virtual-note { font-family: 'Poppins', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; line-height: 1.8; }
 
 /* Endorsements: heading size matches section titles; consistent, roomier comment spacing */
@@ -536,7 +536,7 @@ p, li, a { overflow-wrap: break-word; }
 
 /* Philosophy column: fixed line breaks on every device (text scales with column width instead of re-wrapping) */
 .philosophy { container-type: inline-size; }
-.philosophy .verse-text.verse-lato { white-space: nowrap; text-wrap: nowrap; font-size: 0.9rem; font-size: clamp(0.65rem, calc(100cqw / 29), 1.15rem); }
+.philosophy .verse-text.verse-lato { font-size: 1rem; } /* 16px, same as the body paragraph below */
 .philosophy .verse-ref { margin-top: 1.1rem; }
 .philosophy .virtual-note a { white-space: nowrap; font-size: 0.8rem; font-size: clamp(0.6rem, calc(100cqw / 31), 0.95rem); }
 
@@ -657,3 +657,27 @@ p, li, a { overflow-wrap: break-word; }
 .ct2-stretch:focus-visible { outline: none; }
 .ct2-stretch:focus-visible::after { outline: 3px solid var(--gold); outline-offset: 2px; }
 .ct2-card .ct2-list a, .ct2-card .ct2-btn { position: relative; z-index: 2; }
+
+
+/* Nonprofit transparency card (ranch page, above hero) */
+.rn-trust-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0.5rem 1.5rem; background: transparent; }
+.rn-trust-icon { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--lavender); color: var(--royal); }
+.rn-trust-title { margin-top: 0.85rem; font-size: 1.35rem; font-weight: 600; color: var(--royal); }
+.rn-trust-text { margin-top: 0.4rem; max-width: 30rem; color: var(--royal); }
+.rn-trust-ein { margin-top: 0.6rem; font-size: 0.85rem; color: var(--gold-dark); letter-spacing: 0.02em; }
+.rn-trust-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.1rem; }
+.rn-trust-btn svg { flex: none; }
+
+/* Invite Nichole to Speak (home, above Contact) */
+.speak-card { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 0; background: transparent; }
+.speak-photo { width: 9rem; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 18%; border-radius: 14px; }
+.speak-body { display: flex; flex-direction: column; justify-content: center; }
+.speak-title { font-size: 1.5rem; font-weight: 600; color: var(--royal); }
+.speak-text { margin-top: 0.5rem; color: var(--royal); }
+.speak-btn { display: block; margin-top: 1.25rem; text-align: center; }
+@media (min-width: 640px) {
+  .speak-card { flex-direction: row; align-items: center; justify-content: center; gap: 2rem; }
+  .speak-photo { width: 9rem; flex: none; }
+}
+#speaking > div { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+@media (min-width: 640px) { #speaking > div { padding-top: 5rem; padding-bottom: 5rem; } }
